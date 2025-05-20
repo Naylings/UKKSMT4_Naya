@@ -17,6 +17,13 @@
 
             <div class="card-body p-4">
 
+                @if ($errors->any())
+                    <div class="alert alert-danger alert-dismissible text-bg-danger border-0 fade show" role="alert">
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert"
+                            aria-label="Close"></button>
+                        <strong>Error - </strong> {{ $errors->first() }}
+                    </div>
+                @endif
                 <div class="text-center w-75 m-auto">
                     <h4 class="text-dark-50 text-center pb-0 fw-bold">Log In</h4>
                     <p class="text-muted mb-4">Masukkan Email Dan Password Untuk Membuka Dashboard.</p>
