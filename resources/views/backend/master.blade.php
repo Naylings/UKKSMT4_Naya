@@ -334,7 +334,7 @@
                                     <a href="/dashboard/register">Register Form</a>
                                 </li>
                                 <li>
-                                    <a href="/dashboard/odal">Modal</a>
+                                    <a href="/dashboard/modal">Modal</a>
                                 </li>
                             </ul>
                         </div>
