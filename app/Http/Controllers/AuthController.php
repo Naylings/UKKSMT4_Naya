@@ -53,9 +53,8 @@ class AuthController extends Controller
             'role' => 'admin', // default saat register
         ]);
 
-        Auth::login($user); // langsung login setelah daftar
 
-        return redirect('/dashboard'); // redirect ke home
+        return redirect('/login'); // redirect ke home
     }
 
 
