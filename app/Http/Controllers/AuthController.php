@@ -55,7 +55,7 @@ class AuthController extends Controller
 
         Auth::login($user); // langsung login setelah daftar
 
-        return redirect('/'); // redirect ke home
+        return redirect('/dashboard'); // redirect ke home
     }
 
 
