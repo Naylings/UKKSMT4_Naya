@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Product;
 
 use App\Http\Controllers\Controller;
 use App\Models\Product;
+use App\Models\Student;
 use App\Repository\Product\ProductRepo;
 use App\Repository\Ruangan\RuanganRepo;
 use Illuminate\Http\Request;
@@ -19,6 +20,11 @@ class ProductController extends Controller
 
     public function index(Request $req)
     {
+        // 
+        // 
+        // 
+        // 
+        // 
         $product = $this->__repo_product->index(request()->all());
         return view('backend.pages.product.table', compact('product'));
     }
@@ -33,6 +39,6 @@ class ProductController extends Controller
     public function form(Request $req)
     {
         $rooms = $this->__repo_ruangan->index(request()->all());
-        return view('backend.pages.product.form',compact('rooms'));
+        return view('backend.pages.product.form', compact('rooms'));
     }
 }

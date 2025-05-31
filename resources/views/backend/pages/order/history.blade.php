@@ -1,7 +1,7 @@
 @extends('backend.master')
 
 @section('title')
-    <title>Product | Aplikasi</title>
+    <title>Order | Aplikasi</title>
 @endsection
 
 @section('content')
@@ -12,11 +12,11 @@
                 <div class="page-title-right">
                     <ol class="breadcrumb m-0">
                         <li class="breadcrumb-item"><a href="index.php">Hyper</a></li>
-                        <li class="breadcrumb-item"><a href="javascript: void(0);">People</a></li>
-                        <li class="breadcrumb-item active">Product</li>
+                        <li class="breadcrumb-item"><a href="javascript: void(0);">Order</a></li>
+                        <li class="breadcrumb-item active">History</li>
                     </ol>
                 </div>
-                <h4 class="page-title">Product</h4>
+                <h4 class="page-title">History</h4>
             </div>
         </div>
     </div>
@@ -27,7 +27,7 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-body">
-                    <h4 class="header-title">Product Table</h4>
+                    <h4 class="header-title">Order Table</h4>
                     <div class="row">
                         <div class="col-auto ms-auto">
                             <div class="btn-group mb-2 ">
@@ -43,21 +43,28 @@
                                         <th>No.</th>
                                         <th>Name</th>
                                         <th>Price</th>
-                                        <th>Room - Store</th>
+                                        <th>Status</th>
                                     </tr>
                                 </thead>
 
 
                                 <tbody>
-                                    @forelse ($product as $i => $item)
+                                    @forelse ($orders as $i => $item)
                                         <tr>
-                                            <td>{{ $i +1 }}</td>
-                                            <td>{{ $item->name }}</td>
-                                            <td>Rp {{   number_format($item->price ?? 0, 0, ',', '.')  }}</td>
-                                            <td>
-                                                {{ $item->room->no . ' - ' . $item->room->name }}
+                                            <td>{{ $i + 1 }}</td>
+                                            <td>{{ $item->product->name }}</td>
+                                            <td>Rp {{ number_format($item->product->price ?? 0, 0, ',', '.') }}</td>
+                                            @php
+                                                switch ($item->status) {
+                                                    
+                                                        case 0 : $status = 'PENDING'; break;
+                                                        case 1 : $status = 'PROGRESS'; break;
+                                                        case 2 : $status = 'COMPLETE'; break;
+                                                    
+                                                }
+                                            @endphp
+                                            <td>{{ $status }}</td>
 
-                                            </td>
                                         </tr>
                                     @empty
                                     @endforelse
