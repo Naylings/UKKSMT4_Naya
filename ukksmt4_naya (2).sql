@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: May 31, 2025 at 02:19 AM
+-- Generation Time: May 31, 2025 at 03:07 PM
 -- Server version: 8.0.30
 -- PHP Version: 8.1.10
 
@@ -113,7 +113,10 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (14, '2025_05_30_032640_create_ruangans_table', 7),
 (15, '2025_05_30_032727_create_employee_has_rooms_table', 7),
 (16, '2025_05_30_080637_create_products_table', 8),
-(17, '2025_05_30_092639_change_ruangan_to_ruanganid', 9);
+(17, '2025_05_30_092639_change_ruangan_to_ruanganid', 9),
+(18, '2025_05_31_025350_create_saldos_table', 10),
+(19, '2025_05_31_032837_saldo_table_recreate', 11),
+(20, '2025_05_31_035756_create_transactions_table', 12);
 
 -- --------------------------------------------------------
 
@@ -151,7 +154,8 @@ CREATE TABLE `people` (
 
 INSERT INTO `people` (`id`, `name`, `sex`, `dob`, `pob`, `reference_id`, `reference_type`, `created_at`, `updated_at`) VALUES
 (5, 'tarno', 'laki-laki', '2025-05-15', 'bancol', 2, 'App\\Models\\Employee', '2025-05-29 07:54:18', '2025-05-29 07:54:18'),
-(6, 'Azrael', 'laki-laki', '2025-05-21', 'bancol', 9, 'App\\Models\\Student', '2025-05-29 19:16:40', '2025-05-29 19:16:40');
+(7, 'Azrael', 'laki-laki', '2025-05-27', 'bancol', 15, 'App\\Models\\Student', '2025-05-30 20:30:53', '2025-05-30 20:30:53'),
+(8, 'tarno', 'perempuan', '2025-05-20', 'bancol', 16, 'App\\Models\\Student', '2025-05-30 20:39:49', '2025-05-30 20:39:49');
 
 -- --------------------------------------------------------
 
@@ -192,7 +196,8 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `name`, `price`, `ruangan_id`, `created_at`, `updated_at`) VALUES
-(1, 'buah apel', 5000, 1, '2025-05-30 02:49:06', '2025-05-30 02:49:06');
+(1, 'buah apel', 5000, 1, '2025-05-30 02:49:06', '2025-05-30 02:49:06'),
+(2, 'bensin', 12000, 1, '2025-05-30 23:12:20', '2025-05-30 23:12:20');
 
 -- --------------------------------------------------------
 
@@ -218,6 +223,29 @@ INSERT INTO `ruangans` (`id`, `name`, `no`, `created_at`, `updated_at`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `saldos`
+--
+
+CREATE TABLE `saldos` (
+  `id` bigint UNSIGNED NOT NULL,
+  `saldo` bigint UNSIGNED NOT NULL,
+  `reference_id` int UNSIGNED NOT NULL,
+  `reference_type` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `saldos`
+--
+
+INSERT INTO `saldos` (`id`, `saldo`, `reference_id`, `reference_type`, `created_at`, `updated_at`) VALUES
+(1, 0, 15, 'App\\Models\\Student', '2025-05-30 20:30:53', '2025-05-31 00:26:43'),
+(2, 10000000, 16, 'App\\Models\\Student', '2025-05-30 20:39:49', '2025-05-30 20:39:49');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `students`
 --
 
@@ -235,7 +263,39 @@ CREATE TABLE `students` (
 --
 
 INSERT INTO `students` (`id`, `nisn`, `nis`, `status`, `created_at`, `updated_at`) VALUES
-(9, 9876543, 123456789, 'active', '2025-05-29 19:16:40', '2025-05-29 19:16:40');
+(15, 9876543, 1234567, 'active', '2025-05-30 20:30:53', '2025-05-30 20:30:53'),
+(16, 9876543, 1234567, 'active', '2025-05-30 20:39:49', '2025-05-30 20:39:49');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `transactions`
+--
+
+CREATE TABLE `transactions` (
+  `id` bigint UNSIGNED NOT NULL,
+  `product_id` bigint UNSIGNED NOT NULL,
+  `student_id` bigint UNSIGNED NOT NULL,
+  `debt` int NOT NULL,
+  `paid` int NOT NULL,
+  `status` tinyint UNSIGNED NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `transactions`
+--
+
+INSERT INTO `transactions` (`id`, `product_id`, `student_id`, `debt`, `paid`, `status`, `created_at`, `updated_at`) VALUES
+(1, 1, 15, 0, 5000, 0, '2025-05-31 00:08:50', '2025-05-31 00:08:50'),
+(2, 1, 15, 0, 5000, 0, '2025-05-31 00:15:03', '2025-05-31 00:15:03'),
+(3, 1, 15, 0, 5000, 0, '2025-05-31 00:15:06', '2025-05-31 00:15:06'),
+(4, 1, 15, 0, 5000, 0, '2025-05-31 00:15:08', '2025-05-31 00:15:08'),
+(5, 2, 15, 0, 12000, 0, '2025-05-31 00:15:10', '2025-05-31 00:15:10'),
+(6, 2, 15, 0, 12000, 0, '2025-05-31 00:15:12', '2025-05-31 00:15:12'),
+(7, 1, 15, 0, 5000, 0, '2025-05-31 00:15:15', '2025-05-31 00:15:15'),
+(8, 1, 15, 0, 5000, 0, '2025-05-31 00:26:43', '2025-05-31 00:26:43');
 
 -- --------------------------------------------------------
 
@@ -261,8 +321,9 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `username`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`, `role`) VALUES
 (1, 'admin baru', 'admin@admin.com', NULL, '$2y$10$mozYPi12ngJHcZUttfEyQ.5qMzV..WSFhDm3IulVXZlt1k5CXLrdC', 'iL0vvDaKUKomm37uq1QskxoASqlwcLDLzuZaRhYS6nGcahLpLU2Yt66ce73s', '2025-05-15 18:11:01', '2025-05-15 18:11:01', 'admin'),
-(4, 'Naylings', 'cabang1@apartemenantapani.com', NULL, '$2y$10$VaMyYp0GU73hEjbGtQ/cjuLbL8LUbJ6VK3s6u/WU0MnyGIcKUeplK', '9jg34DpfkHh8El4eshb19Q2KKGPsh1bfeOLeVDlXiyriaYL9iMjpOFrEKsta', '2025-05-29 07:54:18', '2025-05-29 07:54:18', 'user'),
-(5, 'Naylings', 'student@gmail.com', NULL, '$2y$10$Oro5kBsCscW8jgO75lohfO5UJXBFSpIVs3935UeZh53v0mjmP0VPW', '3c5TtmgNWhsbpFGawxp4d8OdoP20z8IdMVYiP3jk6RF1Y3GTGxdpFmzDBy6L', '2025-05-29 19:16:40', '2025-05-29 19:16:40', 'user');
+(4, 'Naylings', 'cabang1@apartemenantapani.com', NULL, '$2y$10$VaMyYp0GU73hEjbGtQ/cjuLbL8LUbJ6VK3s6u/WU0MnyGIcKUeplK', 'CvUglkCb0iIOTaqoo4KYebvbfwiZmqmd1TWobdixZxWiXA0gjVVa55ko5L85', '2025-05-29 07:54:18', '2025-05-29 07:54:18', 'user'),
+(14, 'azrael', 'student2@gmail.com', NULL, '$2y$10$3cFj22ShuGDinzH93T.80.FnoDoXgxm5jLXjCznONfxqxsDJfh4/y', 'bVQvflI2OOlSWZldpey7XeEUUBachp7vurK4P0dOF6GWQzrFs4QTODbCp5xl', '2025-05-30 20:30:53', '2025-05-30 20:30:53', 'user'),
+(15, 'tarno', 'student@gmail.com', NULL, '$2y$10$ZyyALT3Kje2QFb6oyRoai.R01xS7RKoAGylW4atoJqMI70.wE7ycG', 'RHQ16ZMcsFaONrBsFidqjyh3bvjLYUkk6TsKoYdt9ljkTM6Qeoj4EYZDqCKm', '2025-05-30 20:39:49', '2025-05-30 20:39:49', 'user');
 
 -- --------------------------------------------------------
 
@@ -286,7 +347,8 @@ CREATE TABLE `user_references` (
 
 INSERT INTO `user_references` (`id`, `status`, `reference_id`, `user_id`, `reference_type`, `created_at`, `updated_at`) VALUES
 (3, 'active', 2, 4, 'App\\Models\\Employee', '2025-05-29 07:54:18', '2025-05-29 07:54:18'),
-(4, 'active', 9, 5, 'App\\Models\\Student', '2025-05-29 19:16:40', '2025-05-29 19:16:40');
+(5, 'active', 15, 14, 'App\\Models\\Student', '2025-05-30 20:30:53', '2025-05-30 20:30:53'),
+(6, 'active', 16, 15, 'App\\Models\\Student', '2025-05-30 20:39:49', '2025-05-30 20:39:49');
 
 --
 -- Indexes for dumped tables
@@ -350,9 +412,21 @@ ALTER TABLE `ruangans`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `saldos`
+--
+ALTER TABLE `saldos`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `students`
 --
 ALTER TABLE `students`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `transactions`
+--
+ALTER TABLE `transactions`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -394,13 +468,13 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `people`
 --
 ALTER TABLE `people`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `personal_access_tokens`
@@ -412,7 +486,7 @@ ALTER TABLE `personal_access_tokens`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `ruangans`
@@ -421,22 +495,34 @@ ALTER TABLE `ruangans`
   MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
+-- AUTO_INCREMENT for table `saldos`
+--
+ALTER TABLE `saldos`
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT for table `students`
 --
 ALTER TABLE `students`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+
+--
+-- AUTO_INCREMENT for table `transactions`
+--
+ALTER TABLE `transactions`
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `user_references`
 --
 ALTER TABLE `user_references`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
