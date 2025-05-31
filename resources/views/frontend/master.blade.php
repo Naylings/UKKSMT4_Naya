@@ -69,10 +69,19 @@
                 <!-- right menu -->
                 <ul class="navbar-nav ms-auto align-items-center text center">
                     <li class="nav-item me-0">
+                        @auth
+                        <a href="/dashboard" class="nav-link d-lg-none">Admin</a>
+                        <a href="/dashboard" class="btn btn-sm btn-light rounded-pill d-none d-lg-inline-flex">
+                            Admin
+                        </a>
+                                
+                            @else
                         <a href="/login" class="nav-link d-lg-none">Log in</a>
                         <a href="/login" class="btn btn-sm btn-light rounded-pill d-none d-lg-inline-flex">
                             Log in
                         </a>
+                                
+                        @endauth
                     </li>
                 </ul>
 

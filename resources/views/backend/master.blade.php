@@ -15,22 +15,30 @@
     <link rel="shortcut icon" href="{{ asset('assets/images/favicon.ico') }}">
 
     <!-- Plugin css -->
-    <link href="{{ asset('assets/vendor/bootstrap-datepicker/css/bootstrap-datepicker.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('assets/vendor/bootstrap-datepicker/css/bootstrap-datepicker.min.css') }}" rel="stylesheet"
+        type="text/css" />
     <link rel="stylesheet" href="{{ asset('assets/vendor/daterangepicker/daterangepicker.css') }}">
 
     <!-- Datatables css -->
-    <link href="{{ asset('assets/vendor/datatables.net-bs5/css/dataTables.bootstrap5.min.css') }}" rel="stylesheet" type="text/css" />
-    <link href="{{ asset('assets/vendor/datatables.net-responsive-bs5/css/responsive.bootstrap5.min.css') }}" rel="stylesheet" type="text/css" />
-    <link href="{{ asset('assets/vendor/datatables.net-fixedcolumns-bs5/css/fixedColumns.bootstrap5.min.css') }}" rel="stylesheet" type="text/css" />
-    <link href="{{ asset('assets/vendor/datatables.net-fixedheader-bs5/css/fixedHeader.bootstrap5.min.css') }}" rel="stylesheet" type="text/css" />
-    <link href="{{ asset('assets/vendor/datatables.net-buttons-bs5/css/buttons.bootstrap5.min.css') }}" rel="stylesheet" type="text/css" />
-    <link href="{{ asset('assets/vendor/datatables.net-select-bs5/css/select.bootstrap5.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('assets/vendor/datatables.net-bs5/css/dataTables.bootstrap5.min.css') }}" rel="stylesheet"
+        type="text/css" />
+    <link href="{{ asset('assets/vendor/datatables.net-responsive-bs5/css/responsive.bootstrap5.min.css') }}"
+        rel="stylesheet" type="text/css" />
+    <link href="{{ asset('assets/vendor/datatables.net-fixedcolumns-bs5/css/fixedColumns.bootstrap5.min.css') }}"
+        rel="stylesheet" type="text/css" />
+    <link href="{{ asset('assets/vendor/datatables.net-fixedheader-bs5/css/fixedHeader.bootstrap5.min.css') }}"
+        rel="stylesheet" type="text/css" />
+    <link href="{{ asset('assets/vendor/datatables.net-buttons-bs5/css/buttons.bootstrap5.min.css') }}" rel="stylesheet"
+        type="text/css" />
+    <link href="{{ asset('assets/vendor/datatables.net-select-bs5/css/select.bootstrap5.min.css') }}" rel="stylesheet"
+        type="text/css" />
 
     <!-- Daterangepicker css -->
     <link rel="stylesheet" href="{{ asset('assets/vendor/daterangepicker/daterangepicker.css') }}">
 
     <!-- Vector Map css -->
-    <link rel="stylesheet" href="{{ asset('assets/vendor/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.css') }}">
+    <link rel="stylesheet"
+        href="{{ asset('assets/vendor/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.css') }}">
 
     <!-- Theme Config Js -->
     <script src="{{ asset('assets/js/hyper-config.js') }}"></script>
@@ -103,7 +111,8 @@
                     <div class="app-search dropdown d-none d-lg-block">
                         <form>
                             <div class="input-group">
-                                <input type="search" class="form-control dropdown-toggle" placeholder="Search..." id="top-search">
+                                <input type="search" class="form-control dropdown-toggle" placeholder="Search..."
+                                    id="top-search">
                                 <span class="mdi mdi-magnify search-icon"></span>
                                 <button class="input-group-text btn btn-primary" type="submit">Search</button>
                             </div>
@@ -142,7 +151,9 @@
                                 <!-- item-->
                                 <a href="javascript:void(0);" class="dropdown-item notify-item">
                                     <div class="d-flex">
-                                        <img class="d-flex me-2 rounded-circle" src="{{ asset('assets/images/users/avatar-2.jpg') }}" alt="Generic placeholder image" height="32">
+                                        <img class="d-flex me-2 rounded-circle"
+                                            src="{{ asset('assets/images/users/avatar-2.jpg') }}"
+                                            alt="Generic placeholder image" height="32">
                                         <div class="w-100">
                                             <h5 class="m-0 font-14">Erwin Brown</h5>
                                             <span class="font-12 mb-0">UI Designer</span>
@@ -153,7 +164,9 @@
                                 <!-- item-->
                                 <a href="javascript:void(0);" class="dropdown-item notify-item">
                                     <div class="d-flex">
-                                        <img class="d-flex me-2 rounded-circle" src="{{ asset('assets/images/users/avatar-5.jpg') }}" alt="Generic placeholder image" height="32">
+                                        <img class="d-flex me-2 rounded-circle"
+                                            src="{{ asset('assets/images/users/avatar-5.jpg') }}"
+                                            alt="Generic placeholder image" height="32">
                                         <div class="w-100">
                                             <h5 class="m-0 font-14">Jacob Deo</h5>
                                             <span class="font-12 mb-0">Developer</span>
@@ -167,12 +180,14 @@
 
                 <ul class="topbar-menu d-flex align-items-center gap-3">
                     <li class="dropdown d-lg-none">
-                        <a class="nav-link dropdown-toggle arrow-none" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle arrow-none" data-bs-toggle="dropdown" href="#"
+                            role="button" aria-haspopup="false" aria-expanded="false">
                             <i class="ri-search-line font-22"></i>
                         </a>
                         <div class="dropdown-menu dropdown-menu-animated dropdown-lg p-0">
                             <form class="p-3">
-                                <input type="search" class="form-control" placeholder="Search ..." aria-label="Recipient's username">
+                                <input type="search" class="form-control" placeholder="Search ..."
+                                    aria-label="Recipient's username">
                             </form>
                         </div>
                     </li>
@@ -186,7 +201,8 @@
                     </li>
 
                     <li class="d-none d-sm-inline-block">
-                        <div class="nav-link" id="light-dark-mode" data-bs-toggle="tooltip" data-bs-placement="left" title="Theme Mode">
+                        <div class="nav-link" id="light-dark-mode" data-bs-toggle="tooltip" data-bs-placement="left"
+                            title="Theme Mode">
                             <i class="ri-moon-line font-22"></i>
                         </div>
                     </li>
@@ -199,12 +215,19 @@
                     </li>
 
                     <li class="dropdown">
-                        <a class="nav-link dropdown-toggle arrow-none nav-user px-2" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle arrow-none nav-user px-2" data-bs-toggle="dropdown"
+                            href="#" role="button" aria-haspopup="false" aria-expanded="false">
                             <span class="account-user-avatar">
-                                <img src="{{ asset('assets/images/users/avatar.jpg') }}" alt="user-image" width="32" class="rounded-circle">
+                                <img src="{{ asset('assets/images/users/avatar.jpg') }}" alt="user-image"
+                                    width="32" class="rounded-circle">
                             </span>
                             <span class="d-lg-flex flex-column gap-1 d-none">
-                                <h5 class="my-0">M Naya Dzulqronain</h5>
+                                @php
+                                    $employee = auth()->user()->userReference->reference;
+                                    $employee->load('people');
+                                    $people = $employee->people;
+                                @endphp
+                                <h5 class="my-0">{{ $people->name }}</h5>
                                 <h6 class="my-0 fw-normal">Founder</h6>
                             </span>
                         </a>
@@ -274,7 +297,8 @@
             </a>
 
             <!-- Sidebar Hover Menu Toggle Button -->
-            <div class="button-sm-hover" data-bs-toggle="tooltip" data-bs-placement="right" title="Show Full Sidebar">
+            <div class="button-sm-hover" data-bs-toggle="tooltip" data-bs-placement="right"
+                title="Show Full Sidebar">
                 <i class="ri-checkbox-blank-circle-line align-middle"></i>
             </div>
 
@@ -288,7 +312,8 @@
                 <!-- Leftbar User -->
                 <div class="leftbar-user">
                     <a href="pages-profile.html">
-                        <img src="{{ asset('assets/images/users/avatar.jpg') }}" alt="user-image" height="42" class="rounded-circle shadow-sm">
+                        <img src="{{ asset('assets/images/users/avatar.jpg') }}" alt="user-image" height="42"
+                            class="rounded-circle shadow-sm">
                         <span class="leftbar-user-name mt-2">M Naya Dzulqronain</span>
                     </a>
                 </div>
@@ -303,12 +328,33 @@
                             <span> Dashboard </span>
                         </a>
                     </li>
-                    
+
+
+                    <li class="side-nav-title">Human Resources
+                        <i class="uil-user"></i>
+                    </li>
+                    <li class="side-nav-title">Ruangan Management
+                        <i class="uil-user"></i>
+                    </li>
+                    <li class="side-nav-item">
+                        <a href="{{ route('room_management.room.index') }}" class="side-nav-link">
+                            <i class="uil-graduation-hat "></i>
+                            <span> Ruangan </span>
+                        </a>
+                    </li>
+                    <li class="side-nav-item">
+                        <a href="/dashboard/employee" class="side-nav-link">
+                            <i class="uil-graduation-hat "></i>
+                            <span> Employee </span>
+                        </a>
+                    </li>
+
 
                     <li class="side-nav-title">Components</li>
 
                     <li class="side-nav-item">
-                        <a data-bs-toggle="collapse" href="#sidebarEmail" aria-expanded="false" aria-controls="sidebarEmail" class="side-nav-link">
+                        <a data-bs-toggle="collapse" href="#sidebarEmail" aria-expanded="false"
+                            aria-controls="sidebarEmail" class="side-nav-link">
                             <i class="uil-files-landscapes-alt"></i>
                             <span> Master </span>
                             <span class="menu-arrow"></span>
@@ -341,7 +387,8 @@
                     </li>
 
                     <li class="side-nav-item">
-                        <a data-bs-toggle="collapse" href="#sidebarMultiLevel" aria-expanded="false" aria-controls="sidebarMultiLevel" class="side-nav-link">
+                        <a data-bs-toggle="collapse" href="#sidebarMultiLevel" aria-expanded="false"
+                            aria-controls="sidebarMultiLevel" class="side-nav-link">
                             <i class="uil-folder-plus"></i>
                             <span> Multi Level </span>
                             <span class="menu-arrow"></span>
@@ -349,7 +396,8 @@
                         <div class="collapse" id="sidebarMultiLevel">
                             <ul class="side-nav-second-level">
                                 <li class="side-nav-item">
-                                    <a data-bs-toggle="collapse" href="#sidebarSecondLevel" aria-expanded="false" aria-controls="sidebarSecondLevel">
+                                    <a data-bs-toggle="collapse" href="#sidebarSecondLevel" aria-expanded="false"
+                                        aria-controls="sidebarSecondLevel">
                                         <span> Second Level </span>
                                         <span class="menu-arrow"></span>
                                     </a>
@@ -365,7 +413,8 @@
                                     </div>
                                 </li>
                                 <li class="side-nav-item">
-                                    <a data-bs-toggle="collapse" href="#sidebarThirdLevel" aria-expanded="false" aria-controls="sidebarThirdLevel">
+                                    <a data-bs-toggle="collapse" href="#sidebarThirdLevel" aria-expanded="false"
+                                        aria-controls="sidebarThirdLevel">
                                         <span> Third Level </span>
                                         <span class="menu-arrow"></span>
                                     </a>
@@ -375,7 +424,8 @@
                                                 <a href="javascript: void(0);">Item 1</a>
                                             </li>
                                             <li class="side-nav-item">
-                                                <a data-bs-toggle="collapse" href="#sidebarFourthLevel" aria-expanded="false" aria-controls="sidebarFourthLevel">
+                                                <a data-bs-toggle="collapse" href="#sidebarFourthLevel"
+                                                    aria-expanded="false" aria-controls="sidebarFourthLevel">
                                                     <span> Item 2 </span>
                                                     <span class="menu-arrow"></span>
                                                 </a>
@@ -466,7 +516,8 @@
     <div class="offcanvas offcanvas-end" tabindex="-1" id="theme-settings-offcanvas">
         <div class="d-flex align-items-center bg-primary p-3 offcanvas-header">
             <h5 class="text-white m-0">Theme Settings</h5>
-            <button type="button" class="btn-close btn-close-white ms-auto" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            <button type="button" class="btn-close btn-close-white ms-auto" data-bs-dismiss="offcanvas"
+                aria-label="Close"></button>
         </div>
 
         <div class="offcanvas-body p-0">
@@ -479,17 +530,23 @@
                         <div class="row">
                             <div class="col-4">
                                 <div class="form-check card-radio">
-                                    <input class="form-check-input" type="radio" name="data-bs-theme" id="layout-color-light" value="light">
+                                    <input class="form-check-input" type="radio" name="data-bs-theme"
+                                        id="layout-color-light" value="light">
                                     <label class="form-check-label p-0 avatar-md w-100" for="layout-color-light">
                                         <div id="sidebar-size">
                                             <span class="d-flex h-100">
                                                 <span class="flex-shrink-0">
-                                                    <span class="bg-light d-flex h-100 border-end flex-column p-1 px-2">
+                                                    <span
+                                                        class="bg-light d-flex h-100 border-end flex-column p-1 px-2">
                                                         <span class="d-block p-1 bg-dark-lighten rounded mb-1"></span>
-                                                        <span class="d-block border border-3 border-secondary border-opacity-25 rounded w-100 mb-1"></span>
-                                                        <span class="d-block border border-3 border-secondary border-opacity-25 rounded w-100 mb-1"></span>
-                                                        <span class="d-block border border-3 border-secondary border-opacity-25 rounded w-100 mb-1"></span>
-                                                        <span class="d-block border border-3 border-secondary border-opacity-25 rounded w-100 mb-1"></span>
+                                                        <span
+                                                            class="d-block border border-3 border-secondary border-opacity-25 rounded w-100 mb-1"></span>
+                                                        <span
+                                                            class="d-block border border-3 border-secondary border-opacity-25 rounded w-100 mb-1"></span>
+                                                        <span
+                                                            class="d-block border border-3 border-secondary border-opacity-25 rounded w-100 mb-1"></span>
+                                                        <span
+                                                            class="d-block border border-3 border-secondary border-opacity-25 rounded w-100 mb-1"></span>
                                                     </span>
                                                 </span>
                                                 <span class="flex-grow-1">
@@ -502,12 +559,17 @@
 
                                         <div id="topnav-color" class="bg-white rounded-2 h-100">
                                             <span class="d-flex h-100 flex-column">
-                                                <span class="bg-light d-flex p-1 align-items-center border-bottom border-secondary border-opacity-25">
+                                                <span
+                                                    class="bg-light d-flex p-1 align-items-center border-bottom border-secondary border-opacity-25">
                                                     <span class="d-block p-1 bg-dark-lighten rounded me-1"></span>
-                                                    <span class="d-block border border-3 border-secondary border-opacity-25 rounded ms-auto"></span>
-                                                    <span class="d-block border border-3 border-secondary border-opacity-25 rounded ms-1"></span>
-                                                    <span class="d-block border border-3 border-secondary border-opacity-25 rounded ms-1"></span>
-                                                    <span class="d-block border border-3 border-secondary border-opacity-25 rounded ms-1"></span>
+                                                    <span
+                                                        class="d-block border border-3 border-secondary border-opacity-25 rounded ms-auto"></span>
+                                                    <span
+                                                        class="d-block border border-3 border-secondary border-opacity-25 rounded ms-1"></span>
+                                                    <span
+                                                        class="d-block border border-3 border-secondary border-opacity-25 rounded ms-1"></span>
+                                                    <span
+                                                        class="d-block border border-3 border-secondary border-opacity-25 rounded ms-1"></span>
                                                 </span>
                                                 <span class="d-flex h-100 flex-column bg-white rounded-2">
                                                     <span class="bg-light d-block p-1"></span>
@@ -521,17 +583,23 @@
 
                             <div class="col-4">
                                 <div class="form-check card-radio">
-                                    <input class="form-check-input" type="radio" name="data-bs-theme" id="layout-color-dark" value="dark">
-                                    <label class="form-check-label p-0 avatar-md w-100 bg-black" for="layout-color-dark">
+                                    <input class="form-check-input" type="radio" name="data-bs-theme"
+                                        id="layout-color-dark" value="dark">
+                                    <label class="form-check-label p-0 avatar-md w-100 bg-black"
+                                        for="layout-color-dark">
                                         <div id="sidebar-size">
                                             <span class="d-flex h-100">
                                                 <span class="flex-shrink-0">
                                                     <span class="bg-light d-flex h-100 flex-column p-1 px-2">
                                                         <span class="d-block p-1 bg-dark-lighten rounded mb-1"></span>
-                                                        <span class="d-block border border-secondary border-opacity-25 border-3 rounded w-100 mb-1"></span>
-                                                        <span class="d-block border border-secondary border-opacity-25 border-3 rounded w-100 mb-1"></span>
-                                                        <span class="d-block border border-secondary border-opacity-25 border-3 rounded w-100 mb-1"></span>
-                                                        <span class="d-block border border-secondary border-opacity-25 border-3 rounded w-100 mb-1"></span>
+                                                        <span
+                                                            class="d-block border border-secondary border-opacity-25 border-3 rounded w-100 mb-1"></span>
+                                                        <span
+                                                            class="d-block border border-secondary border-opacity-25 border-3 rounded w-100 mb-1"></span>
+                                                        <span
+                                                            class="d-block border border-secondary border-opacity-25 border-3 rounded w-100 mb-1"></span>
+                                                        <span
+                                                            class="d-block border border-secondary border-opacity-25 border-3 rounded w-100 mb-1"></span>
                                                     </span>
                                                 </span>
                                                 <span class="flex-grow-1">
@@ -544,12 +612,17 @@
 
                                         <div id="topnav-color">
                                             <span class="d-flex h-100 flex-column">
-                                                <span class="bg-light-lighten d-flex p-1 align-items-center border-bottom border-opacity-25 border-primary border-opacity-25">
+                                                <span
+                                                    class="bg-light-lighten d-flex p-1 align-items-center border-bottom border-opacity-25 border-primary border-opacity-25">
                                                     <span class="d-block p-1 bg-dark-lighten rounded me-1"></span>
-                                                    <span class="d-block border border-primary border-opacity-25 border-3 rounded ms-auto"></span>
-                                                    <span class="d-block border border-primary border-opacity-25 border-3 rounded ms-1"></span>
-                                                    <span class="d-block border border-primary border-opacity-25 border-3 rounded ms-1"></span>
-                                                    <span class="d-block border border-primary border-opacity-25 border-3 rounded ms-1"></span>
+                                                    <span
+                                                        class="d-block border border-primary border-opacity-25 border-3 rounded ms-auto"></span>
+                                                    <span
+                                                        class="d-block border border-primary border-opacity-25 border-3 rounded ms-1"></span>
+                                                    <span
+                                                        class="d-block border border-primary border-opacity-25 border-3 rounded ms-1"></span>
+                                                    <span
+                                                        class="d-block border border-primary border-opacity-25 border-3 rounded ms-1"></span>
                                                 </span>
                                                 <span class="bg-light-lighten d-block p-1"></span>
                                             </span>
@@ -567,17 +640,23 @@
                         <div class="row">
                             <div class="col-4">
                                 <div class="form-check card-radio">
-                                    <input class="form-check-input" type="radio" name="data-layout-mode" id="layout-mode-fluid" value="fluid">
+                                    <input class="form-check-input" type="radio" name="data-layout-mode"
+                                        id="layout-mode-fluid" value="fluid">
                                     <label class="form-check-label p-0 avatar-md w-100" for="layout-mode-fluid">
                                         <div id="sidebar-size">
                                             <span class="d-flex h-100">
                                                 <span class="flex-shrink-0">
-                                                    <span class="bg-light d-flex h-100 border-end flex-column p-1 px-2">
+                                                    <span
+                                                        class="bg-light d-flex h-100 border-end flex-column p-1 px-2">
                                                         <span class="d-block p-1 bg-dark-lighten rounded mb-1"></span>
-                                                        <span class="d-block border border-3 border-secondary border-opacity-25 rounded w-100 mb-1"></span>
-                                                        <span class="d-block border border-3 border-secondary border-opacity-25 rounded w-100 mb-1"></span>
-                                                        <span class="d-block border border-3 border-secondary border-opacity-25 rounded w-100 mb-1"></span>
-                                                        <span class="d-block border border-3 border-secondary border-opacity-25 rounded w-100 mb-1"></span>
+                                                        <span
+                                                            class="d-block border border-3 border-secondary border-opacity-25 rounded w-100 mb-1"></span>
+                                                        <span
+                                                            class="d-block border border-3 border-secondary border-opacity-25 rounded w-100 mb-1"></span>
+                                                        <span
+                                                            class="d-block border border-3 border-secondary border-opacity-25 rounded w-100 mb-1"></span>
+                                                        <span
+                                                            class="d-block border border-3 border-secondary border-opacity-25 rounded w-100 mb-1"></span>
                                                     </span>
                                                 </span>
                                                 <span class="flex-grow-1">
@@ -590,12 +669,17 @@
 
                                         <div id="topnav-color">
                                             <span class="d-flex h-100 flex-column">
-                                                <span class="bg-light d-flex p-1 align-items-center border-bottom border-secondary border-opacity-25">
+                                                <span
+                                                    class="bg-light d-flex p-1 align-items-center border-bottom border-secondary border-opacity-25">
                                                     <span class="d-block p-1 bg-dark-lighten rounded me-1"></span>
-                                                    <span class="d-block border border-3 border-secondary border-opacity-25 rounded ms-auto"></span>
-                                                    <span class="d-block border border-3 border-secondary border-opacity-25 rounded ms-1"></span>
-                                                    <span class="d-block border border-3 border-secondary border-opacity-25 rounded ms-1"></span>
-                                                    <span class="d-block border border-3 border-secondary border-opacity-25 rounded ms-1"></span>
+                                                    <span
+                                                        class="d-block border border-3 border-secondary border-opacity-25 rounded ms-auto"></span>
+                                                    <span
+                                                        class="d-block border border-3 border-secondary border-opacity-25 rounded ms-1"></span>
+                                                    <span
+                                                        class="d-block border border-3 border-secondary border-opacity-25 rounded ms-1"></span>
+                                                    <span
+                                                        class="d-block border border-3 border-secondary border-opacity-25 rounded ms-1"></span>
                                                 </span>
                                                 <span class="bg-light d-block p-1"></span>
                                             </span>
@@ -606,17 +690,23 @@
                             </div>
                             <div class="col-4" id="layout-boxed">
                                 <div class="form-check card-radio">
-                                    <input class="form-check-input" type="radio" name="data-layout-mode" id="layout-mode-boxed" value="boxed">
+                                    <input class="form-check-input" type="radio" name="data-layout-mode"
+                                        id="layout-mode-boxed" value="boxed">
                                     <label class="form-check-label p-0 avatar-md w-100 px-2" for="layout-mode-boxed">
                                         <div id="sidebar-size" class="border-start border-end">
                                             <span class="d-flex h-100">
                                                 <span class="flex-shrink-0">
-                                                    <span class="bg-light d-flex h-100 border-end flex-column p-1 px-2">
+                                                    <span
+                                                        class="bg-light d-flex h-100 border-end flex-column p-1 px-2">
                                                         <span class="d-block p-1 bg-dark-lighten rounded mb-1"></span>
-                                                        <span class="d-block border border-3 border-secondary border-opacity-25 rounded w-100 mb-1"></span>
-                                                        <span class="d-block border border-3 border-secondary border-opacity-25 rounded w-100 mb-1"></span>
-                                                        <span class="d-block border border-3 border-secondary border-opacity-25 rounded w-100 mb-1"></span>
-                                                        <span class="d-block border border-3 border-secondary border-opacity-25 rounded w-100 mb-1"></span>
+                                                        <span
+                                                            class="d-block border border-3 border-secondary border-opacity-25 rounded w-100 mb-1"></span>
+                                                        <span
+                                                            class="d-block border border-3 border-secondary border-opacity-25 rounded w-100 mb-1"></span>
+                                                        <span
+                                                            class="d-block border border-3 border-secondary border-opacity-25 rounded w-100 mb-1"></span>
+                                                        <span
+                                                            class="d-block border border-3 border-secondary border-opacity-25 rounded w-100 mb-1"></span>
                                                     </span>
                                                 </span>
                                                 <span class="flex-grow-1">
@@ -629,12 +719,17 @@
 
                                         <div id="topnav-color" class="border-start border-end h-100">
                                             <span class="d-flex h-100 flex-column">
-                                                <span class="bg-light d-flex p-1 align-items-center border-bottom border-secondary border-opacity-25">
+                                                <span
+                                                    class="bg-light d-flex p-1 align-items-center border-bottom border-secondary border-opacity-25">
                                                     <span class="d-block p-1 bg-dark-lighten rounded me-1"></span>
-                                                    <span class="d-block border border-3 border-secondary border-opacity-25 rounded ms-auto"></span>
-                                                    <span class="d-block border border-3 border-secondary border-opacity-25 rounded ms-1"></span>
-                                                    <span class="d-block border border-3 border-secondary border-opacity-25 rounded ms-1"></span>
-                                                    <span class="d-block border border-3 border-secondary border-opacity-25 rounded ms-1"></span>
+                                                    <span
+                                                        class="d-block border border-3 border-secondary border-opacity-25 rounded ms-auto"></span>
+                                                    <span
+                                                        class="d-block border border-3 border-secondary border-opacity-25 rounded ms-1"></span>
+                                                    <span
+                                                        class="d-block border border-3 border-secondary border-opacity-25 rounded ms-1"></span>
+                                                    <span
+                                                        class="d-block border border-3 border-secondary border-opacity-25 rounded ms-1"></span>
                                                 </span>
                                                 <span class="bg-light d-block p-1"></span>
                                             </span>
@@ -646,22 +741,30 @@
 
                             <div class="col-4" id="layout-detached">
                                 <div class="form-check sidebar-setting card-radio">
-                                    <input class="form-check-input" type="radio" name="data-layout-mode" id="data-layout-detached" value="detached">
+                                    <input class="form-check-input" type="radio" name="data-layout-mode"
+                                        id="data-layout-detached" value="detached">
                                     <label class="form-check-label p-0 avatar-md w-100" for="data-layout-detached">
                                         <span class="d-flex h-100 flex-column">
                                             <span class="bg-light d-flex p-1 align-items-center border-bottom ">
                                                 <span class="d-block p-1 bg-dark-lighten rounded me-1"></span>
-                                                <span class="d-block border border-3 border-secondary border-opacity-25 rounded ms-auto"></span>
-                                                <span class="d-block border border-3 border-secondary border-opacity-25 rounded ms-1"></span>
-                                                <span class="d-block border border-3 border-secondary border-opacity-25 rounded ms-1"></span>
-                                                <span class="d-block border border-3 border-secondary border-opacity-25 rounded ms-1"></span>
+                                                <span
+                                                    class="d-block border border-3 border-secondary border-opacity-25 rounded ms-auto"></span>
+                                                <span
+                                                    class="d-block border border-3 border-secondary border-opacity-25 rounded ms-1"></span>
+                                                <span
+                                                    class="d-block border border-3 border-secondary border-opacity-25 rounded ms-1"></span>
+                                                <span
+                                                    class="d-block border border-3 border-secondary border-opacity-25 rounded ms-1"></span>
                                             </span>
                                             <span class="d-flex h-100 p-1 px-2">
                                                 <span class="flex-shrink-0">
                                                     <span class="bg-light d-flex h-100 flex-column p-1 px-2">
-                                                        <span class="d-block border border-3 border-secondary border-opacity-25 rounded w-100 mb-1"></span>
-                                                        <span class="d-block border border-3 border-secondary border-opacity-25 rounded w-100 mb-1"></span>
-                                                        <span class="d-block border border-3 border-secondary border-opacity-25 rounded w-100"></span>
+                                                        <span
+                                                            class="d-block border border-3 border-secondary border-opacity-25 rounded w-100 mb-1"></span>
+                                                        <span
+                                                            class="d-block border border-3 border-secondary border-opacity-25 rounded w-100 mb-1"></span>
+                                                        <span
+                                                            class="d-block border border-3 border-secondary border-opacity-25 rounded w-100"></span>
                                                     </span>
                                                 </span>
                                             </span>
@@ -680,17 +783,22 @@
                     <div class="row">
                         <div class="col-4">
                             <div class="form-check card-radio">
-                                <input class="form-check-input" type="radio" name="data-topbar-color" id="topbar-color-light" value="light">
+                                <input class="form-check-input" type="radio" name="data-topbar-color"
+                                    id="topbar-color-light" value="light">
                                 <label class="form-check-label p-0 avatar-md w-100" for="topbar-color-light">
                                     <div id="sidebar-size">
                                         <span class="d-flex h-100">
                                             <span class="flex-shrink-0">
                                                 <span class="bg-light d-flex h-100 border-end  flex-column p-1 px-2">
                                                     <span class="d-block p-1 bg-dark-lighten rounded mb-1"></span>
-                                                    <span class="d-block border border-3 border-secondary border-opacity-25 rounded w-100 mb-1"></span>
-                                                    <span class="d-block border border-3 border-secondary border-opacity-25 rounded w-100 mb-1"></span>
-                                                    <span class="d-block border border-3 border-secondary border-opacity-25 rounded w-100 mb-1"></span>
-                                                    <span class="d-block border border-3 border-secondary border-opacity-25 rounded w-100 mb-1"></span>
+                                                    <span
+                                                        class="d-block border border-3 border-secondary border-opacity-25 rounded w-100 mb-1"></span>
+                                                    <span
+                                                        class="d-block border border-3 border-secondary border-opacity-25 rounded w-100 mb-1"></span>
+                                                    <span
+                                                        class="d-block border border-3 border-secondary border-opacity-25 rounded w-100 mb-1"></span>
+                                                    <span
+                                                        class="d-block border border-3 border-secondary border-opacity-25 rounded w-100 mb-1"></span>
                                                 </span>
                                             </span>
                                             <span class="flex-grow-1">
@@ -703,12 +811,17 @@
 
                                     <div id="topnav-color">
                                         <span class="d-flex h-100 flex-column">
-                                            <span class="bg-light d-flex p-1 align-items-center border-bottom border-secondary border-opacity-25">
+                                            <span
+                                                class="bg-light d-flex p-1 align-items-center border-bottom border-secondary border-opacity-25">
                                                 <span class="d-block p-1 bg-dark-lighten rounded me-1"></span>
-                                                <span class="d-block border border-3 border-secondary border-opacity-25 rounded ms-auto"></span>
-                                                <span class="d-block border border-3 border-secondary border-opacity-25 rounded ms-1"></span>
-                                                <span class="d-block border border-3 border-secondary border-opacity-25 rounded ms-1"></span>
-                                                <span class="d-block border border-3 border-secondary border-opacity-25 rounded ms-1"></span>
+                                                <span
+                                                    class="d-block border border-3 border-secondary border-opacity-25 rounded ms-auto"></span>
+                                                <span
+                                                    class="d-block border border-3 border-secondary border-opacity-25 rounded ms-1"></span>
+                                                <span
+                                                    class="d-block border border-3 border-secondary border-opacity-25 rounded ms-1"></span>
+                                                <span
+                                                    class="d-block border border-3 border-secondary border-opacity-25 rounded ms-1"></span>
                                             </span>
                                             <span class="bg-light d-block p-1"></span>
                                         </span>
@@ -720,17 +833,22 @@
 
                         <div class="col-4" style="--ct-dark-rgb: 64,73,84;">
                             <div class="form-check card-radio">
-                                <input class="form-check-input" type="radio" name="data-topbar-color" id="topbar-color-dark" value="dark">
+                                <input class="form-check-input" type="radio" name="data-topbar-color"
+                                    id="topbar-color-dark" value="dark">
                                 <label class="form-check-label p-0 avatar-md w-100" for="topbar-color-dark">
                                     <div id="sidebar-size">
                                         <span class="d-flex h-100">
                                             <span class="flex-shrink-0">
                                                 <span class="bg-light d-flex h-100 border-end  flex-column p-1 px-2">
                                                     <span class="d-block p-1 bg-primary-lighten rounded mb-1"></span>
-                                                    <span class="d-block border border-3 border-secondary border-opacity-25 rounded w-100 mb-1"></span>
-                                                    <span class="d-block border border-3 border-secondary border-opacity-25 rounded w-100 mb-1"></span>
-                                                    <span class="d-block border border-3 border-secondary border-opacity-25 rounded w-100 mb-1"></span>
-                                                    <span class="d-block border border-3 border-secondary border-opacity-25 rounded w-100 mb-1"></span>
+                                                    <span
+                                                        class="d-block border border-3 border-secondary border-opacity-25 rounded w-100 mb-1"></span>
+                                                    <span
+                                                        class="d-block border border-3 border-secondary border-opacity-25 rounded w-100 mb-1"></span>
+                                                    <span
+                                                        class="d-block border border-3 border-secondary border-opacity-25 rounded w-100 mb-1"></span>
+                                                    <span
+                                                        class="d-block border border-3 border-secondary border-opacity-25 rounded w-100 mb-1"></span>
                                                 </span>
                                             </span>
                                             <span class="flex-grow-1">
@@ -743,12 +861,17 @@
 
                                     <div id="topnav-color">
                                         <span class="d-flex h-100 flex-column">
-                                            <span class="bg-dark d-flex p-1 align-items-center border-bottom border-secondary border-opacity-25">
+                                            <span
+                                                class="bg-dark d-flex p-1 align-items-center border-bottom border-secondary border-opacity-25">
                                                 <span class="d-block p-1 bg-primary-lighten rounded me-1"></span>
-                                                <span class="d-block border border-primary border-opacity-25 border-3 rounded ms-auto"></span>
-                                                <span class="d-block border border-primary border-opacity-25 border-3 rounded ms-1"></span>
-                                                <span class="d-block border border-primary border-opacity-25 border-3 rounded ms-1"></span>
-                                                <span class="d-block border border-primary border-opacity-25 border-3 rounded ms-1"></span>
+                                                <span
+                                                    class="d-block border border-primary border-opacity-25 border-3 rounded ms-auto"></span>
+                                                <span
+                                                    class="d-block border border-primary border-opacity-25 border-3 rounded ms-1"></span>
+                                                <span
+                                                    class="d-block border border-primary border-opacity-25 border-3 rounded ms-1"></span>
+                                                <span
+                                                    class="d-block border border-primary border-opacity-25 border-3 rounded ms-1"></span>
                                             </span>
                                             <span class="bg-light d-block p-1"></span>
                                         </span>
@@ -760,17 +883,22 @@
 
                         <div class="col-4">
                             <div class="form-check card-radio">
-                                <input class="form-check-input" type="radio" name="data-topbar-color" id="topbar-color-brand" value="brand">
+                                <input class="form-check-input" type="radio" name="data-topbar-color"
+                                    id="topbar-color-brand" value="brand">
                                 <label class="form-check-label p-0 avatar-md w-100" for="topbar-color-brand">
                                     <div id="sidebar-size">
                                         <span class="d-flex h-100">
                                             <span class="flex-shrink-0">
                                                 <span class="bg-light d-flex h-100 border-end  flex-column p-1 px-2">
                                                     <span class="d-block p-1 bg-dark-lighten rounded mb-1"></span>
-                                                    <span class="d-block border border-3 border-secondary border-opacity-25 rounded w-100 mb-1"></span>
-                                                    <span class="d-block border border-3 border-secondary border-opacity-25 rounded w-100 mb-1"></span>
-                                                    <span class="d-block border border-3 border-secondary border-opacity-25 rounded w-100 mb-1"></span>
-                                                    <span class="d-block border border-3 border-secondary border-opacity-25 rounded w-100 mb-1"></span>
+                                                    <span
+                                                        class="d-block border border-3 border-secondary border-opacity-25 rounded w-100 mb-1"></span>
+                                                    <span
+                                                        class="d-block border border-3 border-secondary border-opacity-25 rounded w-100 mb-1"></span>
+                                                    <span
+                                                        class="d-block border border-3 border-secondary border-opacity-25 rounded w-100 mb-1"></span>
+                                                    <span
+                                                        class="d-block border border-3 border-secondary border-opacity-25 rounded w-100 mb-1"></span>
                                                 </span>
                                             </span>
                                             <span class="flex-grow-1">
@@ -783,12 +911,17 @@
 
                                     <div id="topnav-color">
                                         <span class="d-flex h-100 flex-column">
-                                            <span class="bg-primary bg-gradient d-flex p-1 align-items-center border-bottom border-secondary border-opacity-25">
+                                            <span
+                                                class="bg-primary bg-gradient d-flex p-1 align-items-center border-bottom border-secondary border-opacity-25">
                                                 <span class="d-block p-1 bg-light opacity-25 rounded me-1"></span>
-                                                <span class="d-block border border-3 border opacity-25 rounded ms-auto"></span>
-                                                <span class="d-block border border-3 border opacity-25 rounded ms-1"></span>
-                                                <span class="d-block border border-3 border opacity-25 rounded ms-1"></span>
-                                                <span class="d-block border border-3 border opacity-25 rounded ms-1"></span>
+                                                <span
+                                                    class="d-block border border-3 border opacity-25 rounded ms-auto"></span>
+                                                <span
+                                                    class="d-block border border-3 border opacity-25 rounded ms-1"></span>
+                                                <span
+                                                    class="d-block border border-3 border opacity-25 rounded ms-1"></span>
+                                                <span
+                                                    class="d-block border border-3 border opacity-25 rounded ms-1"></span>
                                             </span>
                                             <span class="bg-light d-block p-1"></span>
                                         </span>
@@ -805,17 +938,23 @@
                         <div class="row">
                             <div class="col-4">
                                 <div class="form-check sidebar-setting card-radio">
-                                    <input class="form-check-input" type="radio" name="data-menu-color" id="leftbar-color-light" value="light">
+                                    <input class="form-check-input" type="radio" name="data-menu-color"
+                                        id="leftbar-color-light" value="light">
                                     <label class="form-check-label p-0 avatar-md w-100" for="leftbar-color-light">
                                         <div id="sidebar-size">
                                             <span class="d-flex h-100">
                                                 <span class="flex-shrink-0">
-                                                    <span class="bg-light d-flex h-100 border-end  flex-column p-1 px-2">
+                                                    <span
+                                                        class="bg-light d-flex h-100 border-end  flex-column p-1 px-2">
                                                         <span class="d-block p-1 bg-dark-lighten rounded mb-1"></span>
-                                                        <span class="d-block border border-3 border-secondary border-opacity-25 rounded w-100 mb-1"></span>
-                                                        <span class="d-block border border-3 border-secondary border-opacity-25 rounded w-100 mb-1"></span>
-                                                        <span class="d-block border border-3 border-secondary border-opacity-25 rounded w-100 mb-1"></span>
-                                                        <span class="d-block border border-3 border-secondary border-opacity-25 rounded w-100 mb-1"></span>
+                                                        <span
+                                                            class="d-block border border-3 border-secondary border-opacity-25 rounded w-100 mb-1"></span>
+                                                        <span
+                                                            class="d-block border border-3 border-secondary border-opacity-25 rounded w-100 mb-1"></span>
+                                                        <span
+                                                            class="d-block border border-3 border-secondary border-opacity-25 rounded w-100 mb-1"></span>
+                                                        <span
+                                                            class="d-block border border-3 border-secondary border-opacity-25 rounded w-100 mb-1"></span>
                                                     </span>
                                                 </span>
                                                 <span class="flex-grow-1">
@@ -828,12 +967,17 @@
 
                                         <div id="topnav-color">
                                             <span class="d-flex h-100 flex-column">
-                                                <span class="bg-light d-flex p-1 align-items-center border-bottom border-secondary border-opacity-25">
+                                                <span
+                                                    class="bg-light d-flex p-1 align-items-center border-bottom border-secondary border-opacity-25">
                                                     <span class="d-block p-1 bg-dark-lighten rounded me-1"></span>
-                                                    <span class="d-block border border-3 border-secondary border-opacity-25 rounded ms-auto"></span>
-                                                    <span class="d-block border border-3 border-secondary border-opacity-25 rounded ms-1"></span>
-                                                    <span class="d-block border border-3 border-secondary border-opacity-25 rounded ms-1"></span>
-                                                    <span class="d-block border border-3 border-secondary border-opacity-25 rounded ms-1"></span>
+                                                    <span
+                                                        class="d-block border border-3 border-secondary border-opacity-25 rounded ms-auto"></span>
+                                                    <span
+                                                        class="d-block border border-3 border-secondary border-opacity-25 rounded ms-1"></span>
+                                                    <span
+                                                        class="d-block border border-3 border-secondary border-opacity-25 rounded ms-1"></span>
+                                                    <span
+                                                        class="d-block border border-3 border-secondary border-opacity-25 rounded ms-1"></span>
                                                 </span>
                                                 <span class="bg-light d-block p-1"></span>
                                             </span>
@@ -845,17 +989,22 @@
 
                             <div class="col-4" style="--ct-dark-rgb: 64,73,84;">
                                 <div class="form-check sidebar-setting card-radio">
-                                    <input class="form-check-input" type="radio" name="data-menu-color" id="leftbar-color-dark" value="dark">
+                                    <input class="form-check-input" type="radio" name="data-menu-color"
+                                        id="leftbar-color-dark" value="dark">
                                     <label class="form-check-label p-0 avatar-md w-100" for="leftbar-color-dark">
                                         <div id="sidebar-size">
                                             <span class="d-flex h-100">
                                                 <span class="flex-shrink-0">
                                                     <span class="bg-dark d-flex h-100 flex-column p-1 px-2">
                                                         <span class="d-block p-1 bg-dark-lighten rounded mb-1"></span>
-                                                        <span class="d-block border border-secondary rounded border-opacity-25 border-3 w-100 mb-1"></span>
-                                                        <span class="d-block border border-secondary rounded border-opacity-25 border-3 w-100 mb-1"></span>
-                                                        <span class="d-block border border-secondary rounded border-opacity-25 border-3 w-100 mb-1"></span>
-                                                        <span class="d-block border border-secondary rounded border-opacity-25 border-3 w-100 mb-1"></span>
+                                                        <span
+                                                            class="d-block border border-secondary rounded border-opacity-25 border-3 w-100 mb-1"></span>
+                                                        <span
+                                                            class="d-block border border-secondary rounded border-opacity-25 border-3 w-100 mb-1"></span>
+                                                        <span
+                                                            class="d-block border border-secondary rounded border-opacity-25 border-3 w-100 mb-1"></span>
+                                                        <span
+                                                            class="d-block border border-secondary rounded border-opacity-25 border-3 w-100 mb-1"></span>
                                                     </span>
                                                 </span>
                                                 <span class="flex-grow-1">
@@ -868,12 +1017,17 @@
 
                                         <div id="topnav-color">
                                             <span class="d-flex h-100 flex-column">
-                                                <span class="bg-light d-flex p-1 align-items-center border-bottom border-secondary border-primary border-opacity-25">
+                                                <span
+                                                    class="bg-light d-flex p-1 align-items-center border-bottom border-secondary border-primary border-opacity-25">
                                                     <span class="d-block p-1 bg-primary-lighten rounded me-1"></span>
-                                                    <span class="d-block border border-secondary rounded border-opacity-25 border-3 ms-auto"></span>
-                                                    <span class="d-block border border-secondary rounded border-opacity-25 border-3 ms-1"></span>
-                                                    <span class="d-block border border-secondary rounded border-opacity-25 border-3 ms-1"></span>
-                                                    <span class="d-block border border-secondary rounded border-opacity-25 border-3 ms-1"></span>
+                                                    <span
+                                                        class="d-block border border-secondary rounded border-opacity-25 border-3 ms-auto"></span>
+                                                    <span
+                                                        class="d-block border border-secondary rounded border-opacity-25 border-3 ms-1"></span>
+                                                    <span
+                                                        class="d-block border border-secondary rounded border-opacity-25 border-3 ms-1"></span>
+                                                    <span
+                                                        class="d-block border border-secondary rounded border-opacity-25 border-3 ms-1"></span>
                                                 </span>
                                                 <span class="bg-dark d-block p-1"></span>
                                             </span>
@@ -884,17 +1038,23 @@
                             </div>
                             <div class="col-4">
                                 <div class="form-check sidebar-setting card-radio">
-                                    <input class="form-check-input" type="radio" name="data-menu-color" id="leftbar-color-brand" value="brand">
+                                    <input class="form-check-input" type="radio" name="data-menu-color"
+                                        id="leftbar-color-brand" value="brand">
                                     <label class="form-check-label p-0 avatar-md w-100" for="leftbar-color-brand">
                                         <div id="sidebar-size">
                                             <span class="d-flex h-100">
                                                 <span class="flex-shrink-0">
-                                                    <span class="bg-primary bg-gradient d-flex h-100 flex-column p-1 px-2">
+                                                    <span
+                                                        class="bg-primary bg-gradient d-flex h-100 flex-column p-1 px-2">
                                                         <span class="d-block p-1 bg-light-lighten rounded mb-1"></span>
-                                                        <span class="d-block border opacity-25 rounded border-3 w-100 mb-1"></span>
-                                                        <span class="d-block border opacity-25 rounded border-3 w-100 mb-1"></span>
-                                                        <span class="d-block border opacity-25 rounded border-3 w-100 mb-1"></span>
-                                                        <span class="d-block border opacity-25 rounded border-3 w-100 mb-1"></span>
+                                                        <span
+                                                            class="d-block border opacity-25 rounded border-3 w-100 mb-1"></span>
+                                                        <span
+                                                            class="d-block border opacity-25 rounded border-3 w-100 mb-1"></span>
+                                                        <span
+                                                            class="d-block border opacity-25 rounded border-3 w-100 mb-1"></span>
+                                                        <span
+                                                            class="d-block border opacity-25 rounded border-3 w-100 mb-1"></span>
                                                     </span>
                                                 </span>
                                                 <span class="flex-grow-1">
@@ -907,12 +1067,17 @@
 
                                         <div id="topnav-color">
                                             <span class="d-flex h-100 flex-column">
-                                                <span class="bg-light d-flex p-1 align-items-center border-bottom border-secondary">
+                                                <span
+                                                    class="bg-light d-flex p-1 align-items-center border-bottom border-secondary">
                                                     <span class="d-block p-1 bg-dark-lighten rounded me-1"></span>
-                                                    <span class="d-block border border-3 border-secondary border-opacity-25 rounded ms-auto"></span>
-                                                    <span class="d-block border border-3 border-secondary border-opacity-25 rounded ms-1"></span>
-                                                    <span class="d-block border border-3 border-secondary border-opacity-25 rounded ms-1"></span>
-                                                    <span class="d-block border border-3 border-secondary border-opacity-25 rounded ms-1"></span>
+                                                    <span
+                                                        class="d-block border border-3 border-secondary border-opacity-25 rounded ms-auto"></span>
+                                                    <span
+                                                        class="d-block border border-3 border-secondary border-opacity-25 rounded ms-1"></span>
+                                                    <span
+                                                        class="d-block border border-3 border-secondary border-opacity-25 rounded ms-1"></span>
+                                                    <span
+                                                        class="d-block border border-3 border-secondary border-opacity-25 rounded ms-1"></span>
                                                 </span>
                                                 <span class="bg-primary bg-gradient d-block p-1"></span>
                                             </span>
@@ -931,16 +1096,21 @@
                         <div class="row">
                             <div class="col-4">
                                 <div class="form-check sidebar-setting card-radio">
-                                    <input class="form-check-input" type="radio" name="data-sidenav-size" id="leftbar-size-default" value="default">
+                                    <input class="form-check-input" type="radio" name="data-sidenav-size"
+                                        id="leftbar-size-default" value="default">
                                     <label class="form-check-label p-0 avatar-md w-100" for="leftbar-size-default">
                                         <span class="d-flex h-100">
                                             <span class="flex-shrink-0">
                                                 <span class="bg-light d-flex h-100 border-end  flex-column p-1 px-2">
                                                     <span class="d-block p-1 bg-dark-lighten rounded mb-1"></span>
-                                                    <span class="d-block border border-3 border-secondary border-opacity-25 rounded w-100 mb-1"></span>
-                                                    <span class="d-block border border-3 border-secondary border-opacity-25 rounded w-100 mb-1"></span>
-                                                    <span class="d-block border border-3 border-secondary border-opacity-25 rounded w-100 mb-1"></span>
-                                                    <span class="d-block border border-3 border-secondary border-opacity-25 rounded w-100 mb-1"></span>
+                                                    <span
+                                                        class="d-block border border-3 border-secondary border-opacity-25 rounded w-100 mb-1"></span>
+                                                    <span
+                                                        class="d-block border border-3 border-secondary border-opacity-25 rounded w-100 mb-1"></span>
+                                                    <span
+                                                        class="d-block border border-3 border-secondary border-opacity-25 rounded w-100 mb-1"></span>
+                                                    <span
+                                                        class="d-block border border-3 border-secondary border-opacity-25 rounded w-100 mb-1"></span>
                                                 </span>
                                             </span>
                                             <span class="flex-grow-1">
@@ -956,16 +1126,21 @@
 
                             <div class="col-4">
                                 <div class="form-check sidebar-setting card-radio">
-                                    <input class="form-check-input" type="radio" name="data-sidenav-size" id="leftbar-size-compact" value="compact">
+                                    <input class="form-check-input" type="radio" name="data-sidenav-size"
+                                        id="leftbar-size-compact" value="compact">
                                     <label class="form-check-label p-0 avatar-md w-100" for="leftbar-size-compact">
                                         <span class="d-flex h-100">
                                             <span class="flex-shrink-0">
                                                 <span class="bg-light d-flex h-100 border-end  flex-column p-1">
                                                     <span class="d-block p-1 bg-dark-lighten rounded mb-1"></span>
-                                                    <span class="d-block border border-3 border-secondary border-opacity-25 rounded w-100 mb-1"></span>
-                                                    <span class="d-block border border-3 border-secondary border-opacity-25 rounded w-100 mb-1"></span>
-                                                    <span class="d-block border border-3 border-secondary border-opacity-25 rounded w-100 mb-1"></span>
-                                                    <span class="d-block border border-3 border-secondary border-opacity-25 rounded w-100 mb-1"></span>
+                                                    <span
+                                                        class="d-block border border-3 border-secondary border-opacity-25 rounded w-100 mb-1"></span>
+                                                    <span
+                                                        class="d-block border border-3 border-secondary border-opacity-25 rounded w-100 mb-1"></span>
+                                                    <span
+                                                        class="d-block border border-3 border-secondary border-opacity-25 rounded w-100 mb-1"></span>
+                                                    <span
+                                                        class="d-block border border-3 border-secondary border-opacity-25 rounded w-100 mb-1"></span>
                                                 </span>
                                             </span>
                                             <span class="flex-grow-1">
@@ -981,16 +1156,22 @@
 
                             <div class="col-4">
                                 <div class="form-check sidebar-setting card-radio">
-                                    <input class="form-check-input" type="radio" name="data-sidenav-size" id="leftbar-size-small" value="condensed">
+                                    <input class="form-check-input" type="radio" name="data-sidenav-size"
+                                        id="leftbar-size-small" value="condensed">
                                     <label class="form-check-label p-0 avatar-md w-100" for="leftbar-size-small">
                                         <span class="d-flex h-100">
                                             <span class="flex-shrink-0">
-                                                <span class="bg-light d-flex h-100 border-end flex-column" style="padding: 2px;">
+                                                <span class="bg-light d-flex h-100 border-end flex-column"
+                                                    style="padding: 2px;">
                                                     <span class="d-block p-1 bg-dark-lighten rounded mb-1"></span>
-                                                    <span class="d-block border border-3 border-secondary border-opacity-25 rounded w-100 mb-1"></span>
-                                                    <span class="d-block border border-3 border-secondary border-opacity-25 rounded w-100 mb-1"></span>
-                                                    <span class="d-block border border-3 border-secondary border-opacity-25 rounded w-100 mb-1"></span>
-                                                    <span class="d-block border border-3 border-secondary border-opacity-25 rounded w-100 mb-1"></span>
+                                                    <span
+                                                        class="d-block border border-3 border-secondary border-opacity-25 rounded w-100 mb-1"></span>
+                                                    <span
+                                                        class="d-block border border-3 border-secondary border-opacity-25 rounded w-100 mb-1"></span>
+                                                    <span
+                                                        class="d-block border border-3 border-secondary border-opacity-25 rounded w-100 mb-1"></span>
+                                                    <span
+                                                        class="d-block border border-3 border-secondary border-opacity-25 rounded w-100 mb-1"></span>
                                                 </span>
                                             </span>
                                             <span class="flex-grow-1">
@@ -1006,16 +1187,23 @@
 
                             <div class="col-4">
                                 <div class="form-check sidebar-setting card-radio">
-                                    <input class="form-check-input" type="radio" name="data-sidenav-size" id="leftbar-size-small-hover" value="sm-hover">
-                                    <label class="form-check-label p-0 avatar-md w-100" for="leftbar-size-small-hover">
+                                    <input class="form-check-input" type="radio" name="data-sidenav-size"
+                                        id="leftbar-size-small-hover" value="sm-hover">
+                                    <label class="form-check-label p-0 avatar-md w-100"
+                                        for="leftbar-size-small-hover">
                                         <span class="d-flex h-100">
                                             <span class="flex-shrink-0">
-                                                <span class="bg-light d-flex h-100 border-end flex-column" style="padding: 2px;">
+                                                <span class="bg-light d-flex h-100 border-end flex-column"
+                                                    style="padding: 2px;">
                                                     <span class="d-block p-1 bg-dark-lighten rounded mb-1"></span>
-                                                    <span class="d-block border border-3 border-secondary border-opacity-25 rounded w-100 mb-1"></span>
-                                                    <span class="d-block border border-3 border-secondary border-opacity-25 rounded w-100 mb-1"></span>
-                                                    <span class="d-block border border-3 border-secondary border-opacity-25 rounded w-100 mb-1"></span>
-                                                    <span class="d-block border border-3 border-secondary border-opacity-25 rounded w-100 mb-1"></span>
+                                                    <span
+                                                        class="d-block border border-3 border-secondary border-opacity-25 rounded w-100 mb-1"></span>
+                                                    <span
+                                                        class="d-block border border-3 border-secondary border-opacity-25 rounded w-100 mb-1"></span>
+                                                    <span
+                                                        class="d-block border border-3 border-secondary border-opacity-25 rounded w-100 mb-1"></span>
+                                                    <span
+                                                        class="d-block border border-3 border-secondary border-opacity-25 rounded w-100 mb-1"></span>
                                                 </span>
                                             </span>
                                             <span class="flex-grow-1">
@@ -1031,7 +1219,8 @@
 
                             <div class="col-4">
                                 <div class="form-check sidebar-setting card-radio">
-                                    <input class="form-check-input" type="radio" name="data-sidenav-size" id="leftbar-size-full" value="full">
+                                    <input class="form-check-input" type="radio" name="data-sidenav-size"
+                                        id="leftbar-size-full" value="full">
                                     <label class="form-check-label p-0 avatar-md w-100" for="leftbar-size-full">
                                         <span class="d-flex h-100">
                                             <span class="flex-shrink-0">
@@ -1052,7 +1241,8 @@
 
                             <div class="col-4">
                                 <div class="form-check sidebar-setting card-radio">
-                                    <input class="form-check-input" type="radio" name="data-sidenav-size" id="leftbar-size-fullscreen" value="fullscreen">
+                                    <input class="form-check-input" type="radio" name="data-sidenav-size"
+                                        id="leftbar-size-fullscreen" value="fullscreen">
                                     <label class="form-check-label p-0 avatar-md w-100" for="leftbar-size-fullscreen">
                                         <span class="d-flex h-100">
                                             <span class="flex-grow-1">
@@ -1072,11 +1262,14 @@
                         <h5 class="my-3 font-16 fw-bold">Layout Position</h5>
 
                         <div class="btn-group radio" role="group">
-                            <input type="radio" class="btn-check" name="data-layout-position" id="layout-position-fixed" value="fixed">
+                            <input type="radio" class="btn-check" name="data-layout-position"
+                                id="layout-position-fixed" value="fixed">
                             <label class="btn btn-soft-primary w-sm" for="layout-position-fixed">Fixed</label>
 
-                            <input type="radio" class="btn-check" name="data-layout-position" id="layout-position-scrollable" value="scrollable">
-                            <label class="btn btn-soft-primary w-sm ms-0" for="layout-position-scrollable">Scrollable</label>
+                            <input type="radio" class="btn-check" name="data-layout-position"
+                                id="layout-position-scrollable" value="scrollable">
+                            <label class="btn btn-soft-primary w-sm ms-0"
+                                for="layout-position-scrollable">Scrollable</label>
                         </div>
                     </div>
 
@@ -1084,7 +1277,8 @@
                         <div class="d-flex justify-content-between align-items-center mt-3">
                             <label class="font-16 fw-bold m-0" for="sidebaruser-check">Sidebar User Info</label>
                             <div class="form-check form-switch">
-                                <input type="checkbox" class="form-check-input" name="sidebar-user" id="sidebaruser-check">
+                                <input type="checkbox" class="form-check-input" name="sidebar-user"
+                                    id="sidebaruser-check">
                             </div>
                         </div>
                     </div>
@@ -1130,7 +1324,8 @@
 
     <!-- Vector Map js -->
     <script src="{{ asset('assets/vendor/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.min.js') }}"></script>
-    <script src="{{ asset('assets/vendor/admin-resources/jquery.vectormap/maps/jquery-jvectormap-world-mill-en.js') }}"></script>
+    <script src="{{ asset('assets/vendor/admin-resources/jquery.vectormap/maps/jquery-jvectormap-world-mill-en.js') }}">
+    </script>
 
     <!-- Wallet Dashboard js -->
     <script src="{{ asset('assets/js/pages/demo.dashboard-wallet.js') }}"></script>
