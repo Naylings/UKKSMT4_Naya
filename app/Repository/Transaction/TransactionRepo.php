@@ -26,8 +26,6 @@ class TransactionRepo implements TransactionInterface
                                 'student_id' => $student->getKey(),
 
                             ]);
-                            $student->saldo->saldo -= $product->price;
-                            $student->saldo->save();
                         } else {
                             return back()->withErrors([
                                 'error' => 'Saldo Tidak Mencukupi.',
@@ -54,8 +52,28 @@ class TransactionRepo implements TransactionInterface
     }
 
 
-    public function index(array $attributes){
+    public function index(array $attributes)
+    {
         $attributes ??= request()->all();
-        return Transaction::with('student','product');
+        return Transaction::with('student', 'product');
+    }
+
+
+    public function getOrdersByStatus(int $employeeId, array $statusArray)
+    {
+        return Transaction::whereIn('status', $statusArray)
+            ->whereHas('product.room.employeehasroom', function ($q) use ($employeeId) {
+                $q->where('employee_id', $employeeId);
+            })
+            ->with([
+                'product',
+                'student',
+                'product.room',
+            ])
+            ->orderByRaw(
+                "FIELD(status, " . implode(",", $statusArray) . ")"
+            )
+            ->orderBy('created_at', 'ASC')
+            ->get();
     }
 }

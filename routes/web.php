@@ -6,6 +6,7 @@ use App\Http\Controllers\FrontEndController;
 use App\Http\Controllers\BackEndController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\Employee\EmployeeController;
+use App\Http\Controllers\ExportController;
 use App\Http\Controllers\Product\OrderController;
 use App\Http\Controllers\Product\ProductController;
 use App\Http\Controllers\Ruangan\RuanganController;
@@ -77,6 +78,8 @@ Route::middleware(['auth'])->group(
         Route::get('/dashboard/product', [ProductController::class, 'index'])->name('product');
         Route::get('/dashboard/product/add', [ProductController::class, 'form'])->name('product.add');
         Route::post('/dashboard/product/add', [ProductController::class, 'store'])->name('product.store');
+        Route::get('/dashboard/product/queue', [ProductController::class, 'queue'])->name('queue');
+        Route::get('/dashboard/product/queue/history', [ProductController::class, 'history'])->name('queue.history');
     }
 );
 
@@ -85,6 +88,7 @@ Route::middleware(['auth'])->group(
         Route::get('/dashboard/order', [OrderController::class, 'index'])->name('order');
         Route::post('/dashboard/order', [OrderController::class, 'order'])->name('order.process');
         Route::get('/dashboard/order/history', [OrderController::class, 'history'])->name('history');
+        Route::get('/dashboard/order/history/export', [ExportController::class, 'export'])->name('history.export');
         // Route::get('/dashboard/order/add', [ProductController::class, 'form'])->name('product.add');
     }
 );

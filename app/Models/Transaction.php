@@ -13,6 +13,7 @@ class Transaction extends Model
     const STATUS_PENDING = 0;
     const STATUS_PROGRESS = 1;
     const STATUS_COMPLETE = 2;
+    const STATUS_FAILED = 3;
 
 
     protected static function booted()
@@ -22,9 +23,9 @@ class Transaction extends Model
         });
     }
 
-    public function scopePending($builder){ return $builder->where('status', self::STATUS_PENDING); }
-    public function scopeProgress($builder){ return $builder-> where('status', self::STATUS_PROGRESS); }
-    public function scopeComplete($builder){ return $builder-> where('status', self::STATUS_COMPLETE); }
+    // public function scopePending($builder){ return $builder->where('status', self::STATUS_PENDING); }
+    // public function scopeProgress($builder){ return $builder-> where('status', self::STATUS_PROGRESS); }
+    // public function scopeComplete($builder){ return $builder-> where('status', self::STATUS_COMPLETE); }
 
     public function product()
     {

@@ -12,11 +12,11 @@
                 <div class="page-title-right">
                     <ol class="breadcrumb m-0">
                         <li class="breadcrumb-item"><a href="index.php">Hyper</a></li>
-                        <li class="breadcrumb-item"><a href="javascript: void(0);">Order</a></li>
-                        <li class="breadcrumb-item active">History</li>
+                        <li class="breadcrumb-item"><a href="javascript: void(0);">Product</a></li>
+                        <li class="breadcrumb-item active">Queue</li>
                     </ol>
                 </div>
-                <h4 class="page-title">History</h4>
+                <h4 class="page-title">Queue</h4>
             </div>
         </div>
     </div>
@@ -27,11 +27,11 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-body">
-                    <h4 class="header-title">Order Table</h4>
+                    <h4 class="header-title">Queue Table</h4>
                     <div class="row">
                         <div class="col-auto ms-auto">
                             <div class="btn-group mb-2 ">
-                                <a role="button" href="{{ route('history.export') }}" class="btn btn-success">Export Order History</a>
+                                 <a role="button" href="{{ route('queue.history') }}" class="btn btn-success">Completed Order</a> 
                             </div>
                         </div>
                     </div>
@@ -41,16 +41,18 @@
                                 <thead>
                                     <tr>
                                         <th>No.</th>
-                                        <th>Name</th>
+                                        <th>Customer</th>
+                                        <th>Product</th>
                                         <th>Price</th>
-                                        <th>Status</th>
+                                        <th>Action</th>
                                     </tr>
                                 </thead>
-
+                                
                                 <tbody>
                                     @forelse ($orders as $i => $item)
                                         <tr>
                                             <td>{{ $i + 1 }}</td>
+                                            <td>{{ $item->student->people->name }}</td>
                                             <td>{{ $item->product->name }}</td>
                                             <td>Rp {{ number_format($item->product->price ?? 0, 0, ',', '.') }}</td>
                                             @php
@@ -62,7 +64,19 @@
                                                     
                                                 }
                                             @endphp
-                                            <td>{{ $status }}</td>
+                                            <td>
+                                                
+                                                <div class="btn-group mb-2 ">
+                                                    <a role="button"
+                                                        href=""
+                                                        class="btn btn-success">  
+                                                        Accept
+                                                    </a>
+                                                    <a role="button"
+                                                        href=""
+                                                        class="btn btn-danger">Decline</a>
+                                                </div>
+                                            </td>
 
                                         </tr>
                                     @empty

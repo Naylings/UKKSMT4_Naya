@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: May 31, 2025 at 03:07 PM
+-- Generation Time: Jun 03, 2025 at 01:20 AM
 -- Server version: 8.0.30
 -- PHP Version: 8.1.10
 
@@ -241,7 +241,7 @@ CREATE TABLE `saldos` (
 
 INSERT INTO `saldos` (`id`, `saldo`, `reference_id`, `reference_type`, `created_at`, `updated_at`) VALUES
 (1, 0, 15, 'App\\Models\\Student', '2025-05-30 20:30:53', '2025-05-31 00:26:43'),
-(2, 10000000, 16, 'App\\Models\\Student', '2025-05-30 20:39:49', '2025-05-30 20:39:49');
+(2, 9976000, 16, 'App\\Models\\Student', '2025-05-30 20:39:49', '2025-06-01 20:37:54');
 
 -- --------------------------------------------------------
 
@@ -295,7 +295,9 @@ INSERT INTO `transactions` (`id`, `product_id`, `student_id`, `debt`, `paid`, `s
 (5, 2, 15, 0, 12000, 0, '2025-05-31 00:15:10', '2025-05-31 00:15:10'),
 (6, 2, 15, 0, 12000, 0, '2025-05-31 00:15:12', '2025-05-31 00:15:12'),
 (7, 1, 15, 0, 5000, 0, '2025-05-31 00:15:15', '2025-05-31 00:15:15'),
-(8, 1, 15, 0, 5000, 0, '2025-05-31 00:26:43', '2025-05-31 00:26:43');
+(8, 1, 15, 0, 5000, 0, '2025-05-31 00:26:43', '2025-05-31 00:26:43'),
+(9, 2, 16, 0, 12000, 0, '2025-06-01 20:37:53', '2025-06-01 20:37:53'),
+(10, 2, 16, 0, 12000, 2, '2025-06-01 20:37:54', '2025-06-01 20:37:54');
 
 -- --------------------------------------------------------
 
@@ -322,8 +324,8 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`id`, `username`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`, `role`) VALUES
 (1, 'admin baru', 'admin@admin.com', NULL, '$2y$10$mozYPi12ngJHcZUttfEyQ.5qMzV..WSFhDm3IulVXZlt1k5CXLrdC', 'iL0vvDaKUKomm37uq1QskxoASqlwcLDLzuZaRhYS6nGcahLpLU2Yt66ce73s', '2025-05-15 18:11:01', '2025-05-15 18:11:01', 'admin'),
 (4, 'Naylings', 'cabang1@apartemenantapani.com', NULL, '$2y$10$VaMyYp0GU73hEjbGtQ/cjuLbL8LUbJ6VK3s6u/WU0MnyGIcKUeplK', 'CvUglkCb0iIOTaqoo4KYebvbfwiZmqmd1TWobdixZxWiXA0gjVVa55ko5L85', '2025-05-29 07:54:18', '2025-05-29 07:54:18', 'user'),
-(14, 'azrael', 'student2@gmail.com', NULL, '$2y$10$3cFj22ShuGDinzH93T.80.FnoDoXgxm5jLXjCznONfxqxsDJfh4/y', 'bVQvflI2OOlSWZldpey7XeEUUBachp7vurK4P0dOF6GWQzrFs4QTODbCp5xl', '2025-05-30 20:30:53', '2025-05-30 20:30:53', 'user'),
-(15, 'tarno', 'student@gmail.com', NULL, '$2y$10$ZyyALT3Kje2QFb6oyRoai.R01xS7RKoAGylW4atoJqMI70.wE7ycG', 'RHQ16ZMcsFaONrBsFidqjyh3bvjLYUkk6TsKoYdt9ljkTM6Qeoj4EYZDqCKm', '2025-05-30 20:39:49', '2025-05-30 20:39:49', 'user');
+(14, 'azrael', 'student2@gmail.com', NULL, '$2y$10$3cFj22ShuGDinzH93T.80.FnoDoXgxm5jLXjCznONfxqxsDJfh4/y', 'nkYN2gZtt2bxlikyj374NkUUN9t7XHfWyiungBxzLlPB7YWfDOYZHacsOqmF', '2025-05-30 20:30:53', '2025-05-30 20:30:53', 'user'),
+(15, 'tarno', 'student@gmail.com', NULL, '$2y$10$ZyyALT3Kje2QFb6oyRoai.R01xS7RKoAGylW4atoJqMI70.wE7ycG', 'X5XOuArmAlAt1ezwEYrjt0g23jcuDEw6Hkwt87M1rU9WJL22xxrQXAOuaBdU', '2025-05-30 20:39:49', '2025-05-30 20:39:49', 'user');
 
 -- --------------------------------------------------------
 
@@ -510,7 +512,7 @@ ALTER TABLE `students`
 -- AUTO_INCREMENT for table `transactions`
 --
 ALTER TABLE `transactions`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `users`

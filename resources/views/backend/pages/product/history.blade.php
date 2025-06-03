@@ -1,7 +1,7 @@
 @extends('backend.master')
 
 @section('title')
-    <title>Room | Aplikasi</title>
+    <title>Order | Aplikasi</title>
 @endsection
 
 @section('content')
@@ -12,11 +12,11 @@
                 <div class="page-title-right">
                     <ol class="breadcrumb m-0">
                         <li class="breadcrumb-item"><a href="index.php">Hyper</a></li>
-                        <li class="breadcrumb-item"><a href="javascript: void(0);">People</a></li>
-                        <li class="breadcrumb-item active">Room</li>
+                        <li class="breadcrumb-item"><a href="javascript: void(0);">Order</a></li>
+                        <li class="breadcrumb-item active">History</li>
                     </ol>
                 </div>
-                <h4 class="page-title">Room</h4>
+                <h4 class="page-title">History</h4>
             </div>
         </div>
     </div>
@@ -27,11 +27,11 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-body">
-                    <h4 class="header-title">Room Table</h4>
+                    <h4 class="header-title">Order Table</h4>
                     <div class="row">
                         <div class="col-auto ms-auto">
                             <div class="btn-group mb-2 ">
-                                <a role="button" href="{{ route('room.add') }}" class="btn btn-success">Add Room</a>
+                                <a role="button" href="{{ route('history.export') }}" class="btn btn-success">Export Order History</a>
                             </div>
                         </div>
                     </div>
@@ -41,27 +41,25 @@
                                 <thead>
                                     <tr>
                                         <th>No.</th>
-                                        <th>Name</th>
-                                        <th>Employee</th>
+                                        <th>Customer</th>
+                                        <th>Product</th>
+                                        <th>Price</th>
+                                        <th>Date</th>
+                                        <th>Time</th>
                                     </tr>
                                 </thead>
 
-
                                 <tbody>
-                                    @forelse ($rooms as $item)
+                                    @forelse ($orders as $i => $item)
                                         <tr>
-                                            <td>{{ $item->no }}</td>
-                                            <td>{{ $item->name }}</td>
-                                            <td>
-                                                @if (isset($item->employeeHasRoom))
-                                                    {{ $item->employeeHasRoom->employee->people->name }}
-                                                @else
-                                                    <a role="button"
-                                                        href="{{ route('employeeToRoom.add', ['ruangan_id' => $item->id]) }}"
-                                                        class="btn btn-primary">Assign
-                                                        Employee</a>
-                                                @endif
-                                            </td>
+                                            <td>{{ $i + 1 }}</td>
+                                            <td>{{ $item->student->people->name }}</td>
+                                            <td>{{ $item->product->name }}</td>
+                                            <td>Rp {{ number_format($item->product->price ?? 0, 0, ',', '.') }}</td>
+                                            
+                                            <td>{{ $item->updated_at->format('d M Y') }}</td>
+                                            <td>{{ $item->updated_at->format('G:i:s') }}</td>
+
                                         </tr>
                                     @empty
                                     @endforelse
