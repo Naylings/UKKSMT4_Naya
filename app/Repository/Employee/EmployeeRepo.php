@@ -5,12 +5,14 @@ namespace App\Repository\Employee;
 use App\Contracts\Employee\EmployeeInterface;
 use App\Models\Employee;
 use App\Repository\People\PeopleRepo;
+use App\Repository\Transaction\SaldoRepo;
 
 class EmployeeRepo implements EmployeeInterface
 {
 
     public function __construct(
-        protected PeopleRepo $__repo_people
+        protected PeopleRepo $__repo_people,
+        protected SaldoRepo $__repo_saldo,
     ) {}
 
     public function index(array $request)
@@ -23,7 +25,7 @@ class EmployeeRepo implements EmployeeInterface
     public function store(array $attributes)
     {
         $attributes ??= request()->all();
-        return  Employee::updateOrCreate([
+        $employee =  Employee::updateOrCreate([
             "id" => $attributes['id'] ?? null,
         ], [
 
@@ -33,5 +35,13 @@ class EmployeeRepo implements EmployeeInterface
             'status'       => $attributes['status'],
 
         ]);
+        
+        $saldo = $this->__repo_saldo->store([
+            "reference_id"      => $employee->getKey(),
+            "reference_type"    => Employee::class,
+            "saldo"             => $attributes['saldo'] ?? 0
+        ]);
+
+        return $employee;
     }
 }

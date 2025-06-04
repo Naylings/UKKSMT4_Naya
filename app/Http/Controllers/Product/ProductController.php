@@ -64,7 +64,7 @@ class ProductController extends Controller
         $employeeId = auth()->user()->userReference->reference_id;
 
         // Define the status for the 'history' context
-        $statuses = [Transaction::STATUS_COMPLETE];
+        $statuses = [Transaction::STATUS_COMPLETE, Transaction::STATUS_FAILED];
 
         // Get the orders using the repository
         $orders = $this->__repo_transaction->getOrdersByStatus($employeeId, $statuses);

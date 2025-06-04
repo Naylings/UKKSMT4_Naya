@@ -31,7 +31,8 @@
                     <div class="row">
                         <div class="col-auto ms-auto">
                             <div class="btn-group mb-2 ">
-                                 <a role="button" href="{{ route('queue.history') }}" class="btn btn-success">Completed Order</a> 
+                                <a role="button" href="{{ route('queue.history') }}" class="btn btn-success">Completed
+                                    Order</a>
                             </div>
                         </div>
                     </div>
@@ -47,6 +48,7 @@
                                         <th>Action</th>
                                     </tr>
                                 </thead>
+
                                 
                                 <tbody>
                                     @forelse ($orders as $i => $item)
@@ -55,27 +57,23 @@
                                             <td>{{ $item->student->people->name }}</td>
                                             <td>{{ $item->product->name }}</td>
                                             <td>Rp {{ number_format($item->product->price ?? 0, 0, ',', '.') }}</td>
-                                            @php
-                                                switch ($item->status) {
-                                                    
-                                                        case 0 : $status = 'PENDING'; break;
-                                                        case 1 : $status = 'PROGRESS'; break;
-                                                        case 2 : $status = 'COMPLETE'; break;
-                                                    
-                                                }
-                                            @endphp
+
                                             <td>
-                                                
-                                                <div class="btn-group mb-2 ">
-                                                    <a role="button"
-                                                        href=""
-                                                        class="btn btn-success">  
-                                                        Accept
-                                                    </a>
-                                                    <a role="button"
-                                                        href=""
-                                                        class="btn btn-danger">Decline</a>
-                                                </div>
+                                                @if ($item->status == 0)
+                                                    <div class="btn-group mb-2 ">
+                                                        <a href="{{ route('queue.1', ['id' => $item->id]) }}"
+                                                            class="btn btn-primary">Accept</a>
+
+                                                        <a href="{{ route('queue.3', ['id' => $item->id]) }}"
+                                                            class="btn btn-danger">Decline</a>
+                                                    </div>
+                                                @else
+                                                    <div class="btn-group mb-2 ">
+                                                        <a href="{{ route('queue.2', ['id' => $item->id]) }}"
+                                                            class="btn btn-success">Complete</a>
+                                                    </div>
+                                                @endif
+
                                             </td>
 
                                         </tr>

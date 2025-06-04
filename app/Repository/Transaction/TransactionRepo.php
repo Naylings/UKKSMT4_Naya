@@ -52,10 +52,9 @@ class TransactionRepo implements TransactionInterface
     }
 
 
-    public function index(array $attributes)
+    public function index(array $attributes = [])
     {
-        $attributes ??= request()->all();
-        return Transaction::with('student', 'product');
+        return Transaction::with('student', 'product')->orderBy('updated_at', 'DESC');
     }
 
 
@@ -75,5 +74,26 @@ class TransactionRepo implements TransactionInterface
             )
             ->orderBy('created_at', 'ASC')
             ->get();
+    }
+
+    public function status(int $orderId, int $status)
+    {
+        $order = Transaction::find($orderId);
+
+        if ($order) {
+            $order->update([
+                'status' => $status,
+            ]);
+            if ($status == Transaction::STATUS_COMPLETE) {
+                $order->student->saldo->saldo  -= $order->product->price;
+                $order->student->saldo->save();
+                
+                $employee = auth()->user()->UserReference->reference;
+                $employee->saldo->saldo += $order->product->price;
+                $employee->saldo->save();
+
+
+            }
+        }
     }
 }

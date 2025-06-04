@@ -31,7 +31,8 @@
                     <div class="row">
                         <div class="col-auto ms-auto">
                             <div class="btn-group mb-2 ">
-                                <a role="button" href="{{ route('history.export') }}" class="btn btn-success">Export Order History</a>
+                                <a role="button" href="{{ route('history.export.employee') }}" class="btn btn-success">Export Order
+                                    History</a>
                             </div>
                         </div>
                     </div>
@@ -46,6 +47,7 @@
                                         <th>Price</th>
                                         <th>Date</th>
                                         <th>Time</th>
+                                        <th>Time</th>
                                     </tr>
                                 </thead>
 
@@ -56,10 +58,26 @@
                                             <td>{{ $item->student->people->name }}</td>
                                             <td>{{ $item->product->name }}</td>
                                             <td>Rp {{ number_format($item->product->price ?? 0, 0, ',', '.') }}</td>
-                                            
+
                                             <td>{{ $item->updated_at->format('d M Y') }}</td>
                                             <td>{{ $item->updated_at->format('G:i:s') }}</td>
-
+                                            @php
+                                                switch ($item->status) {
+                                                    case 0:
+                                                        $status = 'PENDING';
+                                                        break;
+                                                    case 1:
+                                                        $status = 'PROGRESS';
+                                                        break;
+                                                    case 2:
+                                                        $status = 'COMPLETE';
+                                                        break;
+                                                    case 3:
+                                                        $status = 'DECLINE';
+                                                        break;
+                                                }
+                                            @endphp
+                                            <td>{{ $status }}</td>
                                         </tr>
                                     @empty
                                     @endforelse

@@ -7,7 +7,7 @@ use Maatwebsite\Excel\Concerns\FromCollection;
 use Maatwebsite\Excel\Concerns\WithHeadings;
 use Maatwebsite\Excel\Concerns\WithMapping;
 
-class HistoryExport implements FromCollection, WithHeadings, WithMapping
+class HistoryEmployeeExport implements FromCollection, WithHeadings, WithMapping
 {
     /**
      * @return \Illuminate\Support\Collection
@@ -29,6 +29,7 @@ class HistoryExport implements FromCollection, WithHeadings, WithMapping
             0 => 'Pending',
             1 => 'In Progress',
             2 => 'Completed',
+            3 =>  'Declined',
             default => 'unknown',
         };
 
@@ -38,7 +39,7 @@ class HistoryExport implements FromCollection, WithHeadings, WithMapping
 
         return [
             $attributes->id,
-            $attributes->student_id,
+            $attributes->student->people->name,
             $attributes->product->name,
             $price,
             $status_text,
@@ -50,10 +51,10 @@ class HistoryExport implements FromCollection, WithHeadings, WithMapping
     {
         return [
             'ID',
-            'student_id',
+            'Student',
             'Product',
             'Price',
-            'status',
+            'Status',
             'Time Stamp',
             // match these with the attributes of your model
         ];

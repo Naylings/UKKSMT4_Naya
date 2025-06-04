@@ -80,6 +80,10 @@ Route::middleware(['auth'])->group(
         Route::post('/dashboard/product/add', [ProductController::class, 'store'])->name('product.store');
         Route::get('/dashboard/product/queue', [ProductController::class, 'queue'])->name('queue');
         Route::get('/dashboard/product/queue/history', [ProductController::class, 'history'])->name('queue.history');
+        Route::get('/dashboard/product/queue/{id}/progress', [OrderController::class, 'order_progress'])->name('queue.1');
+        Route::get('/dashboard/product/queue/{id}/complete', [OrderController::class, 'order_complete'])->name('queue.2');
+        Route::get('/dashboard/product/queue/{id}/decline' , [OrderController::class, 'order_decline'])->name('queue.3');
+        Route::get('/dashboard/product/queue/history/export', [ExportController::class, 'exportEmployee'])->name('history.export.employee');
     }
 );
 
@@ -88,7 +92,7 @@ Route::middleware(['auth'])->group(
         Route::get('/dashboard/order', [OrderController::class, 'index'])->name('order');
         Route::post('/dashboard/order', [OrderController::class, 'order'])->name('order.process');
         Route::get('/dashboard/order/history', [OrderController::class, 'history'])->name('history');
-        Route::get('/dashboard/order/history/export', [ExportController::class, 'export'])->name('history.export');
+        Route::get('/dashboard/order/history/export', [ExportController::class, 'exportStudent'])->name('history.export.student');
         // Route::get('/dashboard/order/add', [ProductController::class, 'form'])->name('product.add');
     }
 );
