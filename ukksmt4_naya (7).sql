@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Jun 04, 2025 at 12:50 AM
+-- Generation Time: Jun 05, 2025 at 02:01 AM
 -- Server version: 8.0.30
 -- PHP Version: 8.1.10
 
@@ -42,7 +42,10 @@ CREATE TABLE `employees` (
 
 INSERT INTO `employees` (`id`, `no_pegawai`, `hire_date`, `status`, `created_at`, `updated_at`) VALUES
 (2, 13123123, '2025-05-01', 'active', '2025-05-29 07:54:18', '2025-05-29 07:54:18'),
-(4, 13123123, '2025-06-11', 'active', '2025-06-03 17:43:36', '2025-06-03 17:43:36');
+(4, 13123123, '2025-06-11', 'active', '2025-06-03 17:43:36', '2025-06-03 17:43:36'),
+(5, 13123123, '2025-06-11', 'active', '2025-06-04 18:52:38', '2025-06-04 18:52:38'),
+(6, 13123124, '1211-12-13', 'active', '2025-06-04 18:57:55', '2025-06-04 18:57:55'),
+(7, 13123125, '2001-12-31', 'active', '2025-06-04 18:59:09', '2025-06-04 18:59:09');
 
 -- --------------------------------------------------------
 
@@ -158,7 +161,10 @@ INSERT INTO `people` (`id`, `name`, `sex`, `dob`, `pob`, `reference_id`, `refere
 (5, 'tarno', 'laki-laki', '2025-05-15', 'bancol', 2, 'App\\Models\\Employee', '2025-05-29 07:54:18', '2025-05-29 07:54:18'),
 (7, 'Azrael', 'laki-laki', '2025-05-27', 'bancol', 15, 'App\\Models\\Student', '2025-05-30 20:30:53', '2025-05-30 20:30:53'),
 (8, 'tarno', 'perempuan', '2025-05-20', 'bancol', 16, 'App\\Models\\Student', '2025-05-30 20:39:49', '2025-05-30 20:39:49'),
-(10, 'bue', 'perempuan', '2000-12-31', 'bancol', 4, 'App\\Models\\Employee', '2025-06-03 17:43:36', '2025-06-03 17:43:36');
+(10, 'bue', 'perempuan', '2000-12-31', 'bancol', 4, 'App\\Models\\Employee', '2025-06-03 17:43:36', '2025-06-03 17:43:36'),
+(11, 'ShellSupreme26', 'laki-laki', '2000-12-31', 'bancol', 5, 'App\\Models\\Employee', '2025-06-04 18:52:38', '2025-06-04 18:52:38'),
+(12, 'pae', 'laki-laki', '5673-12-31', 'bancol', 6, 'App\\Models\\Employee', '2025-06-04 18:57:55', '2025-06-04 18:57:55'),
+(13, 'employee3', 'laki-laki', '1800-12-31', 'bancol', 7, 'App\\Models\\Employee', '2025-06-04 18:59:10', '2025-06-04 18:59:10');
 
 -- --------------------------------------------------------
 
@@ -247,7 +253,10 @@ CREATE TABLE `saldos` (
 INSERT INTO `saldos` (`id`, `saldo`, `reference_id`, `reference_type`, `created_at`, `updated_at`) VALUES
 (1, 20000, 15, 'App\\Models\\Student', '2025-05-30 20:30:53', '2025-05-31 00:26:43'),
 (2, 9964000, 16, 'App\\Models\\Student', '2025-05-30 20:39:49', '2025-06-03 17:46:20'),
-(3, 12000, 4, 'App\\Models\\Employee', '2025-06-03 17:43:36', '2025-06-03 17:46:20');
+(3, 12000, 4, 'App\\Models\\Employee', '2025-06-03 17:43:36', '2025-06-03 17:46:20'),
+(4, 0, 5, 'App\\Models\\Employee', '2025-06-04 18:52:38', '2025-06-04 18:52:38'),
+(5, 0, 6, 'App\\Models\\Employee', '2025-06-04 18:57:55', '2025-06-04 18:57:55'),
+(6, 0, 7, 'App\\Models\\Employee', '2025-06-04 18:59:09', '2025-06-04 18:59:09');
 
 -- --------------------------------------------------------
 
@@ -335,7 +344,10 @@ INSERT INTO `users` (`id`, `username`, `email`, `email_verified_at`, `password`,
 (4, 'Naylings', 'cabang1@apartemenantapani.com', NULL, '$2y$10$VaMyYp0GU73hEjbGtQ/cjuLbL8LUbJ6VK3s6u/WU0MnyGIcKUeplK', 'qNJZh4hTpSCfsBSLNNUboOoiIZCQekyW7qDSyu2J1N6TchOhHgW2kC1MAtX2', '2025-05-29 07:54:18', '2025-05-29 07:54:18', 'user'),
 (14, 'azrael', 'student2@gmail.com', NULL, '$2y$10$3cFj22ShuGDinzH93T.80.FnoDoXgxm5jLXjCznONfxqxsDJfh4/y', 'nkYN2gZtt2bxlikyj374NkUUN9t7XHfWyiungBxzLlPB7YWfDOYZHacsOqmF', '2025-05-30 20:30:53', '2025-05-30 20:30:53', 'user'),
 (15, 'tarno', 'student@gmail.com', NULL, '$2y$10$ZyyALT3Kje2QFb6oyRoai.R01xS7RKoAGylW4atoJqMI70.wE7ycG', 'dc9KGWzCEc0mkQ08xMhSdnAGZZfwJ3lEBLfevAeG6PMUMwaoEnnBXPFQ7Z49', '2025-05-30 20:39:49', '2025-05-30 20:39:49', 'user'),
-(17, 'bue', 'employee@gmail.com', NULL, '$2y$10$QEA1ZIKfWU3SzcSYiU6GVekMXsmqNq21oEzn4EDZ4mDhrONUZJ/tu', 'r6mTcYFFdDLoho82KFJhRTv9tS4YxG9l1DJBj6Zk3KeWLV1kP7WNruCpqKAZ', '2025-06-03 17:43:36', '2025-06-03 17:43:36', 'user');
+(17, 'bue', 'employee@gmail.com', NULL, '$2y$10$QEA1ZIKfWU3SzcSYiU6GVekMXsmqNq21oEzn4EDZ4mDhrONUZJ/tu', 'wc3d72mOad8SVe2hGmBUc8D8DsrJDRNsnLtwU3QlmIjKKwVy2UAY1sl11QjC', '2025-06-03 17:43:36', '2025-06-03 17:43:36', 'user'),
+(21, 'test', 'cabang3@apartemenantapani.com', NULL, '$2y$10$vOWPt8oUcQlHeAXB6P57l.RA3mS/TCvEMd6dnY3GQ4cdSasKhrZ1m', NULL, '2025-06-04 18:52:38', '2025-06-04 18:52:38', 'user'),
+(22, 'pae', 'employee2@gmail.com', NULL, '$2y$10$JgWmO/7H3R41VVafqhUYxet1vgpBE4WI6P6/iitfuMc5Ebhm6Medu', NULL, '2025-06-04 18:57:55', '2025-06-04 18:57:55', 'user'),
+(23, 'employee3', 'employee3@gmail.com', NULL, '$2y$10$FeCGyLIcbz7FT2MdK9IpheM7uLChYU9cjnhf9iwgIonPhaRpsoX52', '9pg1WNRxIIvoLvq7M6EReNqGQHuck6vXvOmsHtBqDmsJzhcn2rHWdTcmgLya', '2025-06-04 18:59:10', '2025-06-04 18:59:10', 'admin');
 
 -- --------------------------------------------------------
 
@@ -361,7 +373,10 @@ INSERT INTO `user_references` (`id`, `status`, `reference_id`, `user_id`, `refer
 (3, 'active', 2, 4, 'App\\Models\\Employee', '2025-05-29 07:54:18', '2025-05-29 07:54:18'),
 (5, 'active', 15, 14, 'App\\Models\\Student', '2025-05-30 20:30:53', '2025-05-30 20:30:53'),
 (6, 'active', 16, 15, 'App\\Models\\Student', '2025-05-30 20:39:49', '2025-05-30 20:39:49'),
-(8, 'active', 4, 17, 'App\\Models\\Employee', '2025-06-03 17:43:36', '2025-06-03 17:43:36');
+(8, 'active', 4, 17, 'App\\Models\\Employee', '2025-06-03 17:43:36', '2025-06-03 17:43:36'),
+(9, 'active', 5, 21, 'App\\Models\\Employee', '2025-06-04 18:52:38', '2025-06-04 18:52:38'),
+(10, 'active', 6, 22, 'App\\Models\\Employee', '2025-06-04 18:57:55', '2025-06-04 18:57:55'),
+(11, 'active', 7, 23, 'App\\Models\\Employee', '2025-06-04 18:59:10', '2025-06-04 18:59:10');
 
 --
 -- Indexes for dumped tables
@@ -463,7 +478,7 @@ ALTER TABLE `user_references`
 -- AUTO_INCREMENT for table `employees`
 --
 ALTER TABLE `employees`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `employee_has_rooms`
@@ -487,7 +502,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `people`
 --
 ALTER TABLE `people`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `personal_access_tokens`
@@ -511,7 +526,7 @@ ALTER TABLE `ruangans`
 -- AUTO_INCREMENT for table `saldos`
 --
 ALTER TABLE `saldos`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `students`
@@ -529,13 +544,13 @@ ALTER TABLE `transactions`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT for table `user_references`
 --
 ALTER TABLE `user_references`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
