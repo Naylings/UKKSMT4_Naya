@@ -22,6 +22,12 @@
     </div>
     <!-- end page title -->
 
+    @if ($errors->any())
+        <div class="alert alert-danger alert-dismissible text-bg-danger border-0 fade show" role="alert">
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert" aria-label="Close"></button>
+            <strong>Error - </strong> {{ $errors->first() }}
+        </div>
+    @endif
 
     <div class="col">
         <div class="card">
@@ -34,40 +40,40 @@
                             @csrf
                             <div class="row">
                                 <input type="hidden" name="status" value="active">
-                                <input type="hidden" name="role" value="user">
                                 <div class="mb-3 col-lg-3 col-md-4 col-sm-6">
                                     <label for="no_pegawai" class="form-label">No. Pegawai</label>
-                                    <input type="text" id="no_pegawai" name="no_pegawai" class="form-control">
+                                    <input required type="number" id="no_pegawai" name="no_pegawai" class="form-control">
                                 </div>
                                 <div class="mb-3 col-lg-3 col-md-4 col-sm-6 ">
                                     <label for="hire" class="form-label">Hire Date</label>
 
-                                    <input class="form-control" id="hire" type="date" name="hire_date">
+                                    <input required class="form-control" id="hire" type="date" name="hire_date">
 
                                 </div>
 
                                 <div class="mb-3 col-lg-6 col-md-4">
                                     <label for="email" class="form-label">Email</label>
-                                    <input type="email" id="email" name="email" class="form-control"
+                                    <input required type="email" id="email" name="email" class="form-control"
                                         placeholder="Email">
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="mb-3 col-lg-3 col-md-6">
                                     <label for="name" class="form-label">Name</label>
-                                    <input type="text" id="name" name="name" class="form-control">
+                                    <input required type="text" id="name" name="name" class="form-control">
                                 </div>
                                 <div class="mb-3 col-lg-3 col-md-6">
                                     <label for="Username" class="form-label">Username</label>
-                                    <input type="text" id="Username" name="username" class="form-control">
+                                    <input required type="text" id="Username" name="username" class="form-control">
                                 </div>
                                 <div class="mb-3 col-lg-6 ">
                                     <label for="pob" class="form-label">Place And Date Of Birth</label>
 
                                     <div class="input-group input-group-merge">
-                                        <input type="text" id="pob" name="pob" class="form-control"
+                                        <input required type="text" id="pob" name="pob" class="form-control"
                                             placeholder="Place">
-                                        <input class="form-control" id="example-date" type="date" name="dob">
+                                        <input required class="form-control" id="example-date" type="date"
+                                            name="dob">
                                     </div>
                                 </div>
 
@@ -77,10 +83,11 @@
                                 <div class="mb-3 col-md-8">
                                     <label for="password" class="form-label">Password</label>
                                     <div class="input-group input-group-merge">
-                                        <input type="password" name="password" id="password" class="form-control" required
-                                            placeholder="Masukkan Password">
-                                        <input type="password" name="password_confirmation" id="password_confirmation"
-                                            class="form-control" required placeholder="Konfirmasi password">
+                                        <input required type="password" name="password" id="password" class="form-control"
+                                            required placeholder="Masukkan Password">
+                                        <input required type="password" name="password_confirmation"
+                                            id="password_confirmation" class="form-control" required
+                                            placeholder="Konfirmasi password">
                                     </div>
                                 </div>
 
@@ -88,8 +95,8 @@
                                     <p class="form-label">Jenis Kelamin</p>
                                     <div class=" mt-2">
                                         <div class="form-check form-check-inline">
-                                            <input type="radio" name="sex" class="form-check-input" id="L"
-                                                value="laki-laki">
+                                            <input required type="radio" name="sex" class="form-check-input"
+                                                id="L" value="laki-laki">
                                             <label class="form-check-label" for="L">Laki - Laki</label>
                                         </div>
                                         <div class="form-check form-check-inline">
@@ -97,6 +104,15 @@
                                                 value="perempuan">
                                             <label class="form-check-label" for="P">Perempuan</label>
                                         </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="mb-3 col-md-4">
+                                    <div class="form-check">
+                                        <input type="checkbox" name="role" value="admin" class="form-check-input"
+                                            id="role-admin">
+                                        <label class="form-check-label" for="role-admin">Set as Admin</label>
                                     </div>
                                 </div>
                             </div>

@@ -23,7 +23,7 @@ class UsersRepo implements UsersInterface
             'email'                 => $attributes['email'],
             "username"              => $attributes["username"],
             'password'              => Hash::make($attributes["password"]),
-            'role'                  => $attributes["role"],
+            'role'                  => $attributes["role"] ?? "user",
 
         ]);
     }

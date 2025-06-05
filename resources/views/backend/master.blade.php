@@ -312,8 +312,26 @@
             <!-- Sidebar -left -->
             <div class="h-100" id="leftside-menu-container" data-simplebar>
 
-                @include('backend.nav')
+                <!-- Leftbar User -->
+                <div class="leftbar-user">
+                    <a href="pages-profile.html">
+                        <img src="{{ asset('assets/images/users/avatar.jpg') }}" alt="user-image" height="42"
+                            class="rounded-circle shadow-sm">
+                        <span class="leftbar-user-name mt-2">{{ $people->name }}</span>
+                        <span class="leftbar-user-name mt-2">Rp
+                            {{ number_format(auth()->user()->userReference->reference->saldo->saldo ?? 0, 0, ',', '.') }}</span>
+                    </a>
+                </div>
 
+                <!--- Sidemenu -->
+                
+    <ul class="side-nav">
+                @include('backend.nav')
+    </ul>
+
+                <!--- End Sidemenu -->
+
+                <div class="clearfix"></div>
             </div>
         </div>
         <!-- ========== Left Sidebar End ========== -->

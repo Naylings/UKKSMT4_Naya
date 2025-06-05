@@ -24,6 +24,21 @@ class StudentRepo implements StudentInterface
     public function store(array $attributes)
     {
         $attributes ??= request()->all();
+
+        $messages = [
+            'nis.unique' => 'NIS already exists.',
+            'nis.digits_between' => 'NIS must be between 1 and 10 digits.',
+            'nisn.unique' => 'NISN already exists.',
+            'nisn.digits_between' => 'NISN must be between 1 and 10 digits.',
+            'email.unique' => 'Email already used.',
+        ];
+
+        validator($attributes, [
+            'email' => ['required',  'unique:users,email'],
+            'nis' => ['required', 'digits_between:1,10', 'unique:students,nis'],
+            'nisn' => ['required', 'digits_between:1,10', 'unique:students,nisn'],
+        ], $messages)->validate();
+
         $student =  Student::updateOrCreate([
             "id" => $attributes['id'] ?? null,
         ], [

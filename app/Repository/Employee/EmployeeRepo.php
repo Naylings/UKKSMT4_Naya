@@ -25,6 +25,18 @@ class EmployeeRepo implements EmployeeInterface
     public function store(array $attributes)
     {
         $attributes ??= request()->all();
+
+        $messages = [
+            'no_pegawai.unique' => 'No. Pegawai already exists.',
+            'no_pegawai.digits_between' => 'No. Pegawai must be between 1 and 10 digits.',
+            'email.unique' => 'Email already used.',
+        ];
+
+        validator($attributes, [
+            'no_pegawai' => ['required', 'digits_between:1,10', 'unique:employees,no_pegawai'],
+            'email' => ['required',  'unique:users,email'],
+        ], $messages)->validate();
+
         $employee =  Employee::updateOrCreate([
             "id" => $attributes['id'] ?? null,
         ], [

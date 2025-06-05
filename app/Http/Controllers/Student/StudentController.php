@@ -34,8 +34,8 @@ class StudentController extends Controller
     public function store(Request $req)
     {
 
-        $users  = $this->__repo_users->store(Request()->all());
         $student = $this->__repo_student->store(request()->all());
+        $users  = $this->__repo_users->store(Request()->all());
         request()->merge([
             "user_id"        => $users->getKey(),
             "reference_id"   => $student->getKey(),

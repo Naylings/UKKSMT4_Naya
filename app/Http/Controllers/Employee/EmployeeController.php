@@ -34,8 +34,8 @@ class EmployeeController extends Controller
 
     public function store(Request $req)
     {
-        $users  = $this->__repo_users->store(Request()->all());
         $employee = $this->__repo_employee->store(request()->all());
+        $users  = $this->__repo_users->store(Request()->all());
         request()->merge([
             "user_id"        => $users->getKey(),
             "reference_id"   => $employee->getKey(),
