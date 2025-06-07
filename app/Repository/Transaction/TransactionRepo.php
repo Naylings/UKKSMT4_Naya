@@ -26,6 +26,8 @@ class TransactionRepo implements TransactionInterface
                                 'student_id' => $student->getKey(),
 
                             ]);
+                            $student->saldo->saldo  -= $product->price;
+                            $student->saldo->save();
                         } else {
                             return back()->withErrors([
                                 'error' => 'Saldo Tidak Mencukupi.',
@@ -85,14 +87,14 @@ class TransactionRepo implements TransactionInterface
                 'status' => $status,
             ]);
             if ($status == Transaction::STATUS_COMPLETE) {
-                $order->student->saldo->saldo  -= $order->product->price;
-                $order->student->saldo->save();
-                
+
                 $employee = auth()->user()->UserReference->reference;
                 $employee->saldo->saldo += $order->product->price;
                 $employee->saldo->save();
+            } elseif ($status == Transaction::STATUS_FAILED) {
 
-
+                $order->student->saldo->saldo  += $order->product->price;
+                $order->student->saldo->save();
             }
         }
     }
